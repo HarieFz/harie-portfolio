@@ -1,0 +1,91 @@
+"use client";
+
+import React, { useContext } from "react";
+import Harie from "../../../public/images/harie.jpg";
+import Github from "../../../public/icons/github.svg";
+import LinkedIn from "../../../public/icons/linkedin.svg";
+import Mail from "../../../public/icons/mail.svg";
+import Instagram from "../../../public/icons/instagram.svg";
+import Phone from "../../../public/icons/phone.svg";
+import Image from "next/image";
+import HighlightContext from "@/app/contexts/highlight.context";
+import Link from "next/link";
+
+export default function ProfileSidebar() {
+  const { highlight } = useContext(HighlightContext);
+  const nav = ["about", "experience", "projects", "technical-skills", "certifications"];
+
+  const scrollToElement = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <div className="w-30 h-30 max-2xl:w-25 max-2xl:h-25 rounded-full overflow-hidden mb-6">
+          <Image
+            src={Harie}
+            alt="Harie"
+            width={0}
+            height={0}
+            sizes="100%"
+            className="w-full h-full object-[50%_60%] object-cover scale-200"
+          />
+        </div>
+        <div>
+          <h1 className="text-[40px] max-2xl:text-2xl text-white mb-3 max-2xl:mb-1">HARIE FAIRUZ ZAKI</h1>
+          <h2 className="text-2xl max-2xl:text-lg text-white mb-6 max-2xl:mb-2">Front-End Web Developer</h2>
+          <p className="text-base max-2xl:text-sm text-white">
+            I build accessible, pixel-perfect digital experiences for the web.
+          </p>
+        </div>
+      </div>
+
+      <nav>
+        <ul className="flex flex-col gap-3.75 max-2xl:gap-2">
+          {nav.map((item) => (
+            <li
+              key={item}
+              className="flex items-center gap-3 cursor-pointer w-fit"
+              onClick={() => scrollToElement(item)}
+            >
+              <div
+                className={`transition-all ${
+                  highlight === item.toLowerCase() ? "bg-[#D9D9D9] w-37.5 h-0.5" : "bg-[#D9D9D9] w-25 h-0.25"
+                }`}
+              />
+              <p
+                className={`transition-colors font-bold text-xl max-2xl:text-base ${
+                  highlight === item.toLowerCase() ? "text-white" : "text-[#EBEDF0]/80"
+                }`}
+              >
+                {item.replace(/-/g, " ").toUpperCase()}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div className="flex items-center gap-6">
+        <Link href="https://github.com/HarieFz" target="_blank">
+          <Github className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
+        <Link href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/" target="_blank">
+          <LinkedIn className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
+        <Link href="mailto:hfairuzzaki@gmail.com">
+          <Mail className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
+        <Link href="https://www.instagram.com/hariefairuz/" target="_blank">
+          <Instagram className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
+        <Link href="https://api.whatsapp.com/send?phone=6285928993274" target="_blank">
+          <Phone className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
+      </div>
+    </>
+  );
+}
