@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto lg:grid lg:grid-cols-12 lg:gap-5 max-lg:px-6">
+      <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto lg:grid lg:grid-cols-12 lg:gap-5">
         <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[718px] max-lg:mb-5">
           <ProfileSidebar />
         </aside>

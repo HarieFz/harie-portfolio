@@ -5,15 +5,16 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="relative max-w-7xl max-[1400px]:max-w-6xl w-full h-full mx-auto">
+    <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
       <Link href="/" className="flex items-center gap-3 mb-3">
         <ArrowLeft className="text-[14px] text-white" />
-        <p className="text-2xl text-white">Harie Fairuz Zaki</p>
+        <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
       </Link>
 
-      <h1 className="font-bold text-[40px] text-white mb-14">All Projects</h1>
+      <h1 className="font-bold lg:text-[40px] text-xl text-white lg:mb-14 mb-10">All Projects</h1>
 
-      <table className="w-full py-6 text-white">
+      {/* Laptop */}
+      <table className="max-lg:hidden w-full py-6 text-white">
         <thead>
           <tr className="[&>th]:pe-4">
             <th align="left">Year</th>
@@ -65,6 +66,44 @@ export default function Projects() {
           ))}
         </tbody>
       </table>
+
+      {/* Mobile */}
+      <div className="lg:hidden grid min-[650px]:grid-cols-2 max-[650px]:grid-cols-1 gap-3">
+        {[1, 2, 3].map((_, index) => (
+          <div key={index} className="border border-[#EBEDF0]/40 rounded-md p-2">
+            <div className="flex flex-col gap-1 mb-3">
+              <p className="font-bold text-xs text-white">Tunas Unggul</p>
+              <p className="text-xs text-[#EBEDF0]/80">PT. Sinergi Nustantara Integrasi</p>
+              <p className="text-2xs text-[#EBEDF0]/80">2025</p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <div className=" card-tech">
+                <p className="font-bold text-xs text-[#2489FF]">React.js</p>
+              </div>
+              <div className=" card-tech">
+                <p className="font-bold text-xs text-[#2489FF]">Next.js</p>
+              </div>
+              <div className=" card-tech">
+                <p className="font-bold text-xs text-[#2489FF]">Redux</p>
+              </div>
+              <div className=" card-tech">
+                <p className="font-bold text-xs text-[#2489FF]">REST API</p>
+              </div>
+              <div className=" card-tech">
+                <p className="font-bold text-xs text-[#2489FF]">TailwindCSS</p>
+              </div>
+            </div>
+
+            <p className="flex items-center gap-1 text-xs underline text-[#EBEDF0]/80">
+              tunas.unggul{" "}
+              <span>
+                <ArrowRight className="w-2.5 h-2.5 -rotate-45 translate-y-0.5" />
+              </span>
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
