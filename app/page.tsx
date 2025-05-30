@@ -41,11 +41,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative max-w-7xl max-[1400px]:max-w-6xl w-full h-full mx-auto grid grid-cols-12 gap-5">
-        <aside className="col-span-5 flex flex-col justify-between max-h-[718px]">
+      <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto lg:grid lg:grid-cols-12 lg:gap-5 max-lg:px-6">
+        <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[718px] max-lg:mb-5">
           <ProfileSidebar />
         </aside>
-        <main className="col-span-7 flex flex-col gap-3 overflow-y-auto">
+        <main className="lg:col-span-7 flex flex-col gap-3 lg:overflow-y-auto">
           <About />
           <Experience />
           <Projects />

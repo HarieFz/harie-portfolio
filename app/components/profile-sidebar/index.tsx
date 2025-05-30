@@ -25,7 +25,7 @@ export default function ProfileSidebar() {
   return (
     <>
       <div>
-        <div className="w-30 h-30 max-2xl:w-25 max-2xl:h-25 rounded-full overflow-hidden mb-6">
+        <div className="w-22.5 h-22.5 lg:w-25 lg:h-25 rounded-full overflow-hidden lg:mb-6 mb-3">
           <Image
             src={Harie}
             alt="Harie"
@@ -36,16 +36,16 @@ export default function ProfileSidebar() {
           />
         </div>
         <div>
-          <h1 className="text-[40px] max-2xl:text-2xl text-white mb-3 max-2xl:mb-1">HARIE FAIRUZ ZAKI</h1>
-          <h2 className="text-2xl max-2xl:text-lg text-white mb-6 max-2xl:mb-2">Front-End Web Developer</h2>
-          <p className="text-base max-2xl:text-sm text-white">
+          <h1 className="xl:text-[40px] lg:text-3xl text-2xl text-white xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
+          <h2 className="xl:text-2xl lg:text-lg text-xs text-white xl:mb-6 mb-3">Front-End Web Developer</h2>
+          <p className="xl:text-base lg:text-sm text-2xs text-white">
             I build accessible, pixel-perfect digital experiences for the web.
           </p>
         </div>
       </div>
 
-      <nav>
-        <ul className="flex flex-col gap-3.75 max-2xl:gap-2">
+      <nav className="lg:block hidden">
+        <ul className="flex flex-col lg:gap-3.75 gap-2">
           {nav.map((item) => (
             <li
               key={item}
@@ -58,7 +58,7 @@ export default function ProfileSidebar() {
                 }`}
               />
               <p
-                className={`transition-colors font-bold text-xl max-2xl:text-base ${
+                className={`transition-colors font-bold xl:text-xl lg:text-base ${
                   highlight === item.toLowerCase() ? "text-white" : "text-[#EBEDF0]/80"
                 }`}
               >
@@ -69,21 +69,21 @@ export default function ProfileSidebar() {
         </ul>
       </nav>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center lg:gap-6 gap-3 max-lg:mt-3">
         <Link href="https://github.com/HarieFz" target="_blank">
-          <Github className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+          <Github className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/" target="_blank">
-          <LinkedIn className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+          <LinkedIn className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="mailto:hfairuzzaki@gmail.com">
-          <Mail className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+          <Mail className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://www.instagram.com/hariefairuz/" target="_blank">
-          <Instagram className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+          <Instagram className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://api.whatsapp.com/send?phone=6285928993274" target="_blank">
-          <Phone className="text-2xl max-2xl:text-xl text-[#EBEDF0]/80 hover:text-white" />
+          <Phone className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
       </div>
     </>

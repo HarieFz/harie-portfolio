@@ -14,14 +14,26 @@ const data = [
     web_name: { name: "Mitra Group", link: "" },
     tech: ["React.js"],
   },
+  {
+    image: Project1,
+    title: "Build a lorem lipsum",
+    description:
+      "Developed a Portfolio Maker web application for a university's Career Development Center to assist alumni in easily creating personal portfolios for professional use.",
+    web_name: { name: "Mitra Group", link: "" },
+    tech: ["React.js"],
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="flex flex-col gap-3">
+    <section id="projects" className="flex flex-col lg:gap-3">
+      <h1 className="lg:hidden block font-bold text-xs text-white">PROJECTS</h1>
       {data.map((item, index) => (
-        <div key={index} className="grid grid-cols-12 gap-8 p-6 hover-gradient-border">
-          <div className="col-span-3 w-full aspect-[155/30] shrink-0">
+        <div
+          key={index}
+          className="lg:hover-gradient-border lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3 max-lg:flex max-lg:flex-col-reverse max-lg:gap-3"
+        >
+          <div className="lg:col-span-3 w-full lg:aspect-[155/30] max-lg:w-[116.5px] max-lg:h-22.5 lg:shrink-0">
             <Image
               src={item.image}
               alt="project-1"
@@ -32,21 +44,21 @@ export default function Projects() {
             />
           </div>
 
-          <div className="col-span-9 flex flex-col gap-6">
+          <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
             <div>
-              <h1 className="font-bold text-2xl text-white mb-3">{item.title}</h1>
-              <p className="text-justify text-white">{item.description}</p>
+              <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h1>
+              <p className="text-justify lg:text-base text-2xs text-white">{item.description}</p>
             </div>
             <div className="flex items-center gap-2">
               <Chain />
-              <Link href={item.web_name.link} className="font-bold text-xs text-white">
+              <Link href={item.web_name.link} className="font-bold lg:text-xs text-2xs text-white">
                 {item.web_name.name}
               </Link>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center lg:gap-3 gap-2">
               {item.tech.map((tech, i) => (
-                <div key={i} className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                  <p className="font-bold text-xs text-[#2489FF]">{tech}</p>
+                <div key={i} className="card-tech">
+                  <p className="font-bold lg:text-xs text-2xs text-[#2489FF]">{tech}</p>
                 </div>
               ))}
             </div>
@@ -56,9 +68,9 @@ export default function Projects() {
 
       <Link
         href="projects"
-        className="flex items-center gap-3 text-white px-6 group transition-all hover:text-[#2489FF]"
+        className="flex items-center gap-3 text-white lg:px-6 max-lg:mb-3 group transition-all hover:text-[#2489FF]"
       >
-        View Full Projects{" "}
+        <span className="lg:text-base text-xs">View Full Projects</span>{" "}
         <span className="group-hover:translate-x-1.5">
           <ArrowRight className="w-3.5 h-3.5 text-white group-hover:text-[#2489FF]" />
         </span>

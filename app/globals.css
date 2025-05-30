@@ -2,6 +2,8 @@
 
 @theme {
   --color-dark-navy: #0f172a;
+
+  --text-2xs: 10px;
 }
 
 @layer base {
@@ -30,5 +32,9 @@
     hover:before:pointer-events-none hover:before:absolute hover:before:inset-0 hover:before:rounded-[inherit] hover:before:border hover:before:border-transparent 
     hover:before:[background:linear-gradient(180deg,rgba(36,137,255,1),rgba(255,255,255,0))_border-box] 
     hover:before:[mask-composite:exclude_!important] hover:before:[mask:linear-gradient(black_0_0)_padding-box,_linear-gradient(black_0_0)];
+  }
+
+  .card-tech {
+    @apply bg-[#2489FF]/25 rounded lg:px-1.5 lg:py-1 px-1 py-0.75;
   }
 }
