@@ -25,6 +25,13 @@ export const metadata: Metadata = {
       "Hi! I'm Harie Fairuz Zaki, a web developer passionate about crafting intuitive, responsive, and visually engaging websites. I'm currently open to job opportunities—let's connect!",
     url: "https://harie-portfolio.vercel.app/",
   },
+  twitter: {
+    card: "summary",
+    title: "Harie Fairuz Zaki",
+    description:
+      "Hi! I'm Harie Fairuz Zaki, a web developer passionate about crafting intuitive, responsive, and visually engaging websites. I'm currently open to job opportunities—let's connect!",
+    creator: "Harie Fairuz Zaki",
+  },
 };
 
 export default function RootLayout({
