@@ -30,7 +30,7 @@ export default function Certifications() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 lg:hover-gradient-border max-lg:flex max-lg:flex-col-reverse max-lg:gap-3 max-lg:py-3"
+            className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 hover-gradient-border max-lg:flex max-lg:flex-col-reverse max-lg:gap-3 max-lg:py-3"
           >
             <div className="lg:col-span-3 w-full lg:aspect-[155/30] lg:shrink-0 max-lg:w-32.5 max-lg:h-22.5">
               <Image

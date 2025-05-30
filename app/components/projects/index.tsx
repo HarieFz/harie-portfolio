@@ -31,7 +31,7 @@ export default function Projects() {
       {data.map((item, index) => (
         <div
           key={index}
-          className="lg:hover-gradient-border lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3 max-lg:flex max-lg:flex-col-reverse max-lg:gap-3"
+          className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3 max-lg:flex max-lg:flex-col-reverse max-lg:gap-3 hover-gradient-border"
         >
           <div className="lg:col-span-3 w-full lg:aspect-[155/30] max-lg:w-[116.5px] max-lg:h-22.5 lg:shrink-0">
             <Image
