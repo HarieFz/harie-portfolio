@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased relative bg-dark-navy h-dvh lg:overflow-hidden 2xl:pt-25.5 2xl:pb-27.75 lg:pt-20 lg:pb-15 max-lg:pt-8 max-lg:px-6`}
+        className={`${poppins.variable} antialiased relative bg-dark-navy 2xl:pt-25.5 2xl:pb-27.75 lg:pt-20 lg:pb-15 max-lg:my-8 max-lg:px-6`}
       >
         <RippleCursor />
         <HighlightProvider>{children}</HighlightProvider>

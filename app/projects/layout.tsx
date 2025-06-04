@@ -1,0 +1,13 @@
+import React from "react";
+
+export default function Layout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
+      <main>{children}</main>
+    </div>
+  );
+}

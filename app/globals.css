@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-dark-navy: #0f172a;
@@ -27,8 +30,15 @@
     @apply bg-[#2489FF]/40;
   }
 
+  .gradient-border {
+    @apply relative rounded-lg transition-all
+    before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent 
+    before:[background:linear-gradient(180deg,rgba(36,137,255,1),rgba(255,255,255,0))_border-box] 
+    before:[mask-composite:exclude_!important] before:[mask:linear-gradient(black_0_0)_padding-box,_linear-gradient(black_0_0)];
+  }
+
   .hover-gradient-border {
-    @apply relative rounded-lg transition-all lg:hover:bg-[#334155]/60 lg:hover:backdrop-blur-xs
+    @apply relative lg:rounded-lg transition-all lg:hover:bg-[#334155]/60 lg:hover:backdrop-blur-xs
     lg:hover:before:pointer-events-none lg:hover:before:absolute lg:hover:before:inset-0 lg:hover:before:rounded-[inherit] lg:hover:before:border lg:hover:before:border-transparent 
     lg:hover:before:[background:linear-gradient(180deg,rgba(36,137,255,1),rgba(255,255,255,0))_border-box] 
     lg:hover:before:[mask-composite:exclude_!important] lg:hover:before:[mask:linear-gradient(black_0_0)_padding-box,_linear-gradient(black_0_0)];
@@ -36,5 +46,19 @@
 
   .card-tech {
     @apply bg-[#2489FF]/25 rounded lg:px-1.5 lg:py-1 px-1 py-0.75;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-button-disabled {
+    @apply opacity-50;
   }
 }

@@ -1,109 +1,78 @@
+"use client";
+
 import React from "react";
 import ArrowLeft from "../../public/icons/arrow-left.svg";
-import ArrowRight from "../../public/icons/arrow-right.svg";
+import Chain from "../../public/icons/link.svg";
+import Image from "next/image";
 import Link from "next/link";
+import { slugify } from "@/utils/slugify";
+import { projectsData } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
+    <>
       <Link href="/" className="flex items-center gap-3 mb-3">
         <ArrowLeft className="text-[14px] text-white" />
         <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
       </Link>
 
-      <h1 className="font-bold lg:text-[40px] text-xl text-white lg:mb-14 mb-10">All Projects</h1>
+      <h1 className="font-bold lg:text-[40px] text-xl text-white">All Projects</h1>
 
-      {/* Laptop */}
-      <table className="max-lg:hidden w-full py-6 text-white">
-        <thead>
-          <tr className="[&>th]:pe-4">
-            <th align="left">Year</th>
-            <th align="left">Project</th>
-            <th align="left">Made At</th>
-            <th align="left">Build with</th>
-            <th align="left">Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[1, 2, 3].map((_, index, { length }) => (
-            <tr
-              key={index}
-              className={`${
-                length - 1 === index ? "" : "border-b-[0.5px] border-[#EBEDF0]/40"
-              } [&>td]:py-6 [&>td]:pe-4`}
-            >
-              <td className="text-[#EBEDF0]/80">2025</td>
-              <td className="font-bold text-lg">Tunas Unggul</td>
-              <td className="text-[#EBEDF0]/80">PT. Sinergi Nusantara Integrasi</td>
-              <td>
-                <div className="flex flex-wrap items-center gap-3">
-                  <div className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                    <p className="font-bold text-xs text-[#2489FF]">React.js</p>
-                  </div>
-                  <div className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                    <p className="font-bold text-xs text-[#2489FF]">Next.js</p>
-                  </div>
-                  <div className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                    <p className="font-bold text-xs text-[#2489FF]">Redux</p>
-                  </div>
-                  <div className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                    <p className="font-bold text-xs text-[#2489FF]">REST API</p>
-                  </div>
-                  <div className=" bg-[#2489FF]/25 rounded px-1.5 py-1">
-                    <p className="font-bold text-xs text-[#2489FF]">TailwindCSS</p>
-                  </div>
+      <div className="w-full h-[0.5px] lg:my-8 my-3 bg-[#EBEDF0]/40" />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-3">
+        {projectsData.map((item, index) => (
+          <Link
+            href={`/projects/${slugify(item.title)}`}
+            key={index}
+            className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 p-3 max-lg:py-3 gradient-border"
+          >
+            <div className="hidden lg:block col-span-3 w-full aspect-[155/120] shrink-0 rounded-lg">
+              <Image
+                src={item.thumbnail}
+                alt={`img-${index + 1}`}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-full object-cover object-top rounded-[inherit]"
+              />
+            </div>
+
+            <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
+              <div>
+                <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h1>
+                <div className="lg:hidden block w-[116.5px] h-22.5 mb-3">
+                  <Image
+                    src={item.thumbnail}
+                    alt="project"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-full object-cover object-top rounded-lg"
+                  />
                 </div>
-              </td>
-              <td>
-                <p className="flex items-center gap-2.5 text-[#EBEDF0]/80">
-                  tunas.unggul{" "}
-                  <span>
-                    <ArrowRight className="w-2.5 h-2.5 -rotate-45" />
-                  </span>
-                </p>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
 
-      {/* Mobile */}
-      <div className="lg:hidden grid min-[650px]:grid-cols-2 max-[650px]:grid-cols-1 gap-3">
-        {[1, 2, 3].map((_, index) => (
-          <div key={index} className="border border-[#EBEDF0]/40 rounded-md p-2">
-            <div className="flex flex-col gap-1 mb-3">
-              <p className="font-bold text-xs text-white">Tunas Unggul</p>
-              <p className="text-xs text-[#EBEDF0]/80">PT. Sinergi Nustantara Integrasi</p>
-              <p className="text-2xs text-[#EBEDF0]/80">2025</p>
-            </div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                  className="text-justify hyphens-auto lg:text-base text-2xs text-white line-clamp-4"
+                ></div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Chain />
+                <p className="font-bold lg:text-xs text-2xs text-white">{item.web_name.name}</p>
+              </div>
 
-            <div className="flex flex-wrap items-center gap-3 mb-3">
-              <div className=" card-tech">
-                <p className="font-bold text-xs text-[#2489FF]">React.js</p>
-              </div>
-              <div className=" card-tech">
-                <p className="font-bold text-xs text-[#2489FF]">Next.js</p>
-              </div>
-              <div className=" card-tech">
-                <p className="font-bold text-xs text-[#2489FF]">Redux</p>
-              </div>
-              <div className=" card-tech">
-                <p className="font-bold text-xs text-[#2489FF]">REST API</p>
-              </div>
-              <div className=" card-tech">
-                <p className="font-bold text-xs text-[#2489FF]">TailwindCSS</p>
+              <div className="flex flex-wrap items-center lg:gap-3 gap-2">
+                {item.tech.map((tech, i) => (
+                  <div key={i} className="card-tech">
+                    <p className="font-bold lg:text-xs text-2xs text-[#2489FF]">{tech}</p>
+                  </div>
+                ))}
               </div>
             </div>
-
-            <p className="flex items-center gap-1 text-xs underline text-[#EBEDF0]/80">
-              tunas.unggul{" "}
-              <span>
-                <ArrowRight className="w-2.5 h-2.5 -rotate-45 translate-y-0.5" />
-              </span>
-            </p>
-          </div>
+          </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }

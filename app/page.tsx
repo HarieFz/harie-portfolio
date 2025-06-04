@@ -14,8 +14,8 @@ import ProfileSidebar from "./components/profile-sidebar";
 export default function Home() {
   const { setHighlight } = useContext(HighlightContext);
   const { inView: aboutView } = useInView({ id: "#about", threshold: 0.5 });
-  const { inView: experienceView } = useInView({ id: "#experience", threshold: 0.2 });
-  const { inView: projectsView } = useInView({ id: "#projects", threshold: 0.2 });
+  const { inView: experienceView } = useInView({ id: "#experience", threshold: 0.3 });
+  const { inView: projectsView } = useInView({ id: "#projects", threshold: 0.3 });
   const { inView: technicalSkillsView } = useInView({ id: "#technical-skills", threshold: 0.5 });
   const { inView: certificationsView } = useInView({ id: "#certifications", threshold: 0.1 });
 
@@ -40,12 +40,12 @@ export default function Home() {
   }, [aboutView, experienceView, projectsView, technicalSkillsView, certificationsView, setHighlight]);
 
   return (
-    <>
+    <div className="lg:h-full lg:overflow-hidden">
       <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto lg:grid lg:grid-cols-12 lg:gap-5">
         <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[718px] max-lg:mb-5">
           <ProfileSidebar />
         </aside>
-        <main className="lg:col-span-7 flex flex-col gap-3 lg:overflow-y-auto">
+        <main className="lg:col-span-7 flex flex-col lg:gap-8 gap-6 lg:max-h-[718px] lg:overflow-y-auto">
           <About />
           <Experience />
           <Projects />
@@ -54,6 +54,6 @@ export default function Home() {
           <Footer />
         </main>
       </div>
-    </>
+    </div>
   );
 }

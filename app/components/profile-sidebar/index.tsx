@@ -36,16 +36,16 @@ export default function ProfileSidebar() {
           />
         </div>
         <div>
-          <h1 className="xl:text-[40px] lg:text-3xl text-2xl text-white xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
-          <h2 className="xl:text-2xl lg:text-lg text-xs text-white xl:mb-6 mb-3">Front-End Web Developer</h2>
-          <p className="xl:text-base lg:text-sm text-2xs text-white">
+          <h1 className="2xl:text-[40px] xl:text-3xl text-2xl text-white 2xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
+          <h2 className="2xl:text-2xl xl:text-lg text-xs text-white 2xl:mb-6 mb-3">Front-End Web Developer</h2>
+          <p className="2xl:text-base xl:text-sm text-2xs text-white">
             I build accessible, pixel-perfect digital experiences for the web.
           </p>
         </div>
       </div>
 
       <nav className="lg:block hidden">
-        <ul className="flex flex-col lg:gap-3.75 gap-2">
+        <ul className="flex flex-col 2xl:gap-3.75 gap-1.5">
           {nav.map((item) => (
             <li
               key={item}
@@ -58,7 +58,7 @@ export default function ProfileSidebar() {
                 }`}
               />
               <p
-                className={`transition-colors font-bold xl:text-xl lg:text-base ${
+                className={`transition-colors font-bold 2xl:text-xl xl:text-base text-sm ${
                   highlight === item.toLowerCase() ? "text-white" : "text-[#EBEDF0]/80"
                 }`}
               >
