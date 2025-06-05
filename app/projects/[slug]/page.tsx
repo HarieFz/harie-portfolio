@@ -162,7 +162,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
           }}
         >
           <div
-            className="z-999 fixed top-3 right-9 w-7 h-7 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer text-gray-700 hover:text-gray-900 flex items-center justify-center"
+            className="z-999 fixed lg:top-4 lg:right-6 top-3 right-9 w-7 h-7 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer text-gray-700 hover:text-gray-900 flex items-center justify-center"
             onClick={handleDialogClose}
           >
             <Minimize className="text-sm" />

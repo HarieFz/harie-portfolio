@@ -71,4 +71,8 @@
   .max-h-for-small-screen {
     @apply lg:max-h-[calc(100dvh-100px)];
   }
+
+  .dialog-h-for-small-screen {
+    @apply h-[500px];
+  }
 }

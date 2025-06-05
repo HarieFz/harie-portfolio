@@ -22,7 +22,7 @@ export default function Dialog({
           open ? "opacity-100 scale-100" : "opacity-0 scale-50"
         }`}
       >
-        <div className="w-full 2xl:h-[700px] xl:h-[600px] lg:h-[500px] h-[400px] overflow-y-auto rounded-2xl">
+        <div className="w-full 2xl:h-[700px] xl:h-[600px] lg:h-[500px] h-[400px] dialog-h-for-small-screen overflow-y-auto rounded-2xl">
           {children}
         </div>
       </div>
