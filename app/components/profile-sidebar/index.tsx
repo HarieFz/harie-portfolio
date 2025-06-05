@@ -7,13 +7,22 @@ import LinkedIn from "../../../public/icons/linkedin.svg";
 import Mail from "../../../public/icons/mail.svg";
 import Instagram from "../../../public/icons/instagram.svg";
 import Phone from "../../../public/icons/phone.svg";
+import Resume from "../../../public/icons/resume.svg";
 import Image from "next/image";
 import HighlightContext from "@/app/contexts/highlight.context";
 import Link from "next/link";
+import { useTooltip } from "@/hooks/useTooltip";
+import { Tooltip } from "@/components/Tooltip";
+
+const nav = ["about", "experience", "projects", "technical-skills", "certifications"];
 
 export default function ProfileSidebar() {
   const { highlight } = useContext(HighlightContext);
-  const nav = ["about", "experience", "projects", "technical-skills", "certifications"];
+  const { tooltip, handleMouseEnter, handleMouseLeave, handleMouseMove } = useTooltip({
+    showDelay: 500,
+    hideDelay: 200,
+    offset: { x: 10, y: 5 },
+  });
 
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
@@ -24,6 +33,7 @@ export default function ProfileSidebar() {
 
   return (
     <>
+      {/* Profile */}
       <div>
         <div className="w-22.5 h-22.5 lg:w-25 lg:h-25 rounded-full overflow-hidden lg:mb-6 mb-3">
           <Image
@@ -44,6 +54,7 @@ export default function ProfileSidebar() {
         </div>
       </div>
 
+      {/* Navigation */}
       <nav className="lg:block hidden">
         <ul className="flex flex-col 2xl:gap-3.75 gap-1.5">
           {nav.map((item) => (
@@ -69,23 +80,59 @@ export default function ProfileSidebar() {
         </ul>
       </nav>
 
-      <div className="flex items-center lg:gap-6 gap-3 max-lg:mt-3">
-        <Link href="https://github.com/HarieFz" target="_blank">
+      {/* Social Media */}
+      <div className="flex items-center lg:gap-6 gap-3 max-lg:mt-3" onMouseMove={handleMouseMove}>
+        <Link
+          href="https://github.com/HarieFz"
+          target="_blank"
+          onMouseEnter={(e) => handleMouseEnter(e, "Github")}
+          onMouseLeave={handleMouseLeave}
+        >
           <Github className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
-        <Link href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/" target="_blank">
+        <Link
+          href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/"
+          target="_blank"
+          onMouseEnter={(e) => handleMouseEnter(e, "LinkedIn")}
+          onMouseLeave={handleMouseLeave}
+        >
           <LinkedIn className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
-        <Link href="mailto:hfairuzzaki@gmail.com">
+        <Link
+          href="mailto:hfairuzzaki@gmail.com"
+          onMouseEnter={(e) => handleMouseEnter(e, "Gmail")}
+          onMouseLeave={handleMouseLeave}
+        >
           <Mail className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
-        <Link href="https://www.instagram.com/hariefairuz/" target="_blank">
+        <Link
+          href="https://www.instagram.com/hariefairuz/"
+          target="_blank"
+          onMouseEnter={(e) => handleMouseEnter(e, "Instagram")}
+          onMouseLeave={handleMouseLeave}
+        >
           <Instagram className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
-        <Link href="https://api.whatsapp.com/send?phone=6285928993274" target="_blank">
+        <Link
+          href="https://api.whatsapp.com/send?phone=6285928993274"
+          target="_blank"
+          onMouseEnter={(e) => handleMouseEnter(e, "Whatsapp")}
+          onMouseLeave={handleMouseLeave}
+        >
           <Phone className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
+        <Link
+          href="/resume/HARIE-FAIRUZ-ZAKI_RESUME.pdf"
+          download="HARIE FAIRUZ ZAKI_RESUME"
+          onMouseEnter={(e) => handleMouseEnter(e, "Resume")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Resume className="xl:w-6 xl:h-6 w-4 h-4 text-[#EBEDF0]/80 hover:text-white" />
+        </Link>
       </div>
+
+      {/* Tooltip */}
+      <Tooltip tooltip={tooltip} />
     </>
   );
 }
