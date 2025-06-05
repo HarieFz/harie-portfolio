@@ -59,7 +59,7 @@ export default function Projects() {
               </div>
               <div className="flex items-center gap-2">
                 <Chain />
-                <p className="font-bold lg:text-xs text-2xs text-white">{item.demo.name}</p>
+                <p className="font-bold lg:text-xs text-2xs text-white">{item?.demo?.name}</p>
               </div>
 
               <div className="flex flex-wrap items-center lg:gap-3 gap-2">
