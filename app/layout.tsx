@@ -24,13 +24,14 @@ export const metadata: Metadata = {
   creator: "Harie Fairuz Zaki",
   robots: "index, follow",
   openGraph: {
-    images: "/images/og-image.jpg",
+    images: "https://res.cloudinary.com/harie/image/upload/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
     title: "Harie Fairuz Zaki",
     description:
       "Hi! I'm Harie Fairuz Zaki, a front-end web developer passionate about crafting intuitive, responsive, and visually engaging websites. I'm currently open to job opportunities—let's connect!",
     url: "https://harie-portfolio.vercel.app/",
   },
   twitter: {
+    images: "https://res.cloudinary.com/harie/image/upload/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
     card: "summary",
     title: "Harie Fairuz Zaki",
     description:
