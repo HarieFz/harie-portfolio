@@ -3,7 +3,7 @@ interface Project {
   images: string[];
   title: string;
   description: string;
-  web_name: { name: string; link: string };
+  demo: { name: string; link: string } | undefined;
   tech: string[];
 }
 
@@ -26,7 +26,7 @@ const projectsData: Project[] = [
 
     <p>⚠️ This project is currently optimized for laptop and desktop screen sizes only. Mobile responsiveness is not fully supported.</p>
     `,
-    web_name: {
+    demo: {
       name: "JCREA — Personal Portfolio Website for Product Designer",
       link: "https://personal-portfolio-by-jcrea-design.vercel.app/",
     },
@@ -56,7 +56,7 @@ const projectsData: Project[] = [
 
     <p class="mb-1">Perfect for SaaS platforms or startups that want to present their AI-powered product with credibility and style.</p> 
     <p>⚠️ This project is currently optimized for laptop and desktop screen sizes only. Mobile responsiveness is not fully supported.</p>`,
-    web_name: {
+    demo: {
       name: "AI Product Tools – Modern Landing Page",
       link: "https://ai-product-tools-landing.vercel.app/",
     },
@@ -88,7 +88,7 @@ const projectsData: Project[] = [
     </ul>
 
     `,
-    web_name: {
+    demo: {
       name: "DashLite – Admin Dashboard UI",
       link: "https://dashboard-by-dashlite-design.vercel.app/",
     },

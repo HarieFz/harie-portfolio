@@ -18,7 +18,7 @@ export const Tooltip: React.FC<TooltipProps> = ({ tooltip, config = {}, classNam
 
   return (
     <div
-      className={`fixed z-50 px-2 py-0.5 border bg-white border-black text-black text-sm pointer-events-none transition-all transform ${
+      className={`lg:block hidden fixed z-50 px-2 py-0.5 border bg-white border-black text-black text-sm pointer-events-none transition-all transform ${
         tooltip.visible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-1"
       } ${className}`}
       style={{

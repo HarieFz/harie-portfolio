@@ -8,7 +8,6 @@ import Chain from "../../../public/icons/link.svg";
 import Dialog from "@/components/Dialog";
 import Maximize from "../../../public/icons/maximize.svg";
 import Minimize from "../../../public/icons/minimize.svg";
-import { projectsData } from "@/data/projects";
 import { slugify } from "@/utils/slugify";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 
@@ -20,6 +19,7 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { certificationsData } from "@/data/certifications";
 import Link from "next/link";
 
 export default function Detail({ params }: { params: Promise<{ slug: string }> }) {
@@ -30,7 +30,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
   const [open, setOpen] = useState<boolean>(false);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
 
-  const data = projectsData.find((project) => slugify(project.title) === slug);
+  const data = certificationsData.find((project) => slugify(project.title) === slug);
 
   const handleMaximize = () => {
     // Ambil active index langsung dari swiper instance untuk memastikan akurasi
@@ -50,7 +50,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
         <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
       </button>
 
-      <h1 className="font-bold lg:text-[40px] text-xl text-white">Project</h1>
+      <h1 className="font-bold lg:text-[40px] text-xl text-white">Certification</h1>
       <div className="w-full h-[0.5px] lg:my-8 my-3 bg-[#EBEDF0]/40" />
 
       <div className="lg:grid lg:grid-cols-10 lg:gap-8">
@@ -118,17 +118,15 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
             ></div>
           </div>
 
-          {data?.demo !== undefined && (
-            <div>
-              <p className="font-bold lg:text-base text-xs text-white mb-3">Demo</p>
-              <div className="flex items-center gap-2">
-                <Chain />
-                <Link href={data?.demo?.link} className="font-bold lg:text-xs text-2xs text-white">
-                  {data?.demo?.name}
-                </Link>
-              </div>
+          <div>
+            <p className="font-bold lg:text-base text-xs text-white mb-3">Preview</p>
+            <div className="flex items-center gap-2">
+              <Chain />
+              <Link href={data?.demo.link ?? "/"} className="font-bold lg:text-xs text-2xs text-white">
+                {data?.demo.name}
+              </Link>
             </div>
-          )}
+          </div>
 
           <div>
             <p className="font-bold lg:text-base text-xs text-white mb-3">Built With</p>
