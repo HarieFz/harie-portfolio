@@ -36,9 +36,9 @@ export default function ProfileSidebar() {
           />
         </div>
         <div>
-          <h1 className="2xl:text-[40px] xl:text-3xl text-2xl text-white 2xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
-          <h2 className="2xl:text-2xl xl:text-lg text-xs text-white 2xl:mb-6 mb-3">Front-End Web Developer</h2>
-          <p className="2xl:text-base xl:text-sm text-2xs text-white">
+          <h1 className="2xl:text-[40px] lg:text-3xl text-2xl text-white 2xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
+          <h2 className="2xl:text-2xl lg:text-lg text-xs text-white 2xl:mb-6 mb-3">Front-End Web Developer</h2>
+          <p className="2xl:text-base lg:text-sm text-2xs text-white">
             I build accessible, pixel-perfect digital experiences for the web.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function ProfileSidebar() {
                 }`}
               />
               <p
-                className={`transition-colors font-bold 2xl:text-xl xl:text-base text-sm ${
+                className={`transition-colors font-bold 2xl:text-xl xl:text-base nav-text text-sm ${
                   highlight === item.toLowerCase() ? "text-white" : "text-[#EBEDF0]/80"
                 }`}
               >
@@ -71,19 +71,19 @@ export default function ProfileSidebar() {
 
       <div className="flex items-center lg:gap-6 gap-3 max-lg:mt-3">
         <Link href="https://github.com/HarieFz" target="_blank">
-          <Github className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
+          <Github className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/" target="_blank">
-          <LinkedIn className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
+          <LinkedIn className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="mailto:hfairuzzaki@gmail.com">
-          <Mail className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
+          <Mail className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://www.instagram.com/hariefairuz/" target="_blank">
-          <Instagram className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
+          <Instagram className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
         <Link href="https://api.whatsapp.com/send?phone=6285928993274" target="_blank">
-          <Phone className="lg:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
+          <Phone className="xl:text-2xl text-base text-[#EBEDF0]/80 hover:text-white" />
         </Link>
       </div>
     </>

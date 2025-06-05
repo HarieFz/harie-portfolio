@@ -6,7 +6,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
+    <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full lg:mt-10 mx-auto">
       <main>{children}</main>
     </div>
   );

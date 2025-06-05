@@ -40,19 +40,25 @@ export default function Home() {
   }, [aboutView, experienceView, projectsView, technicalSkillsView, certificationsView, setHighlight]);
 
   return (
-    <div className="lg:h-full lg:overflow-hidden">
-      <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto lg:grid lg:grid-cols-12 lg:gap-5">
-        <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[718px] max-lg:mb-5">
-          <ProfileSidebar />
-        </aside>
-        <main className="lg:col-span-7 flex flex-col lg:gap-8 gap-6 lg:max-h-[718px] lg:overflow-y-auto">
-          <About />
-          <Experience />
-          <Projects />
-          <TechnicalSkills />
-          <Certifications />
-          <Footer />
-        </main>
+    <div className="h-dvh">
+      <div className="lg:h-full lg:overflow-hidden">
+        <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
+          <div className="w-full h-full lg:flex lg:items-center lg:justify-center">
+            <div className="lg:grid lg:grid-cols-12 lg:gap-5 lg:max-h-[calc(100dvh-200px)] max-h-for-small-screen h-full">
+              <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[600px] max-lg:mb-5">
+                <ProfileSidebar />
+              </aside>
+              <main className="lg:col-span-7 flex flex-col lg:gap-8 gap-6 lg:overflow-y-auto">
+                <About />
+                <Experience />
+                <Projects />
+                <TechnicalSkills />
+                <Certifications />
+                <Footer />
+              </main>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 "use client";
 
 import React, { use, useState } from "react";
-import ArrowLeft from "../../../public/icons/arrow-left.svg";
 import { useRouter } from "next/navigation";
+import ArrowLeft from "../../../public/icons/arrow-left.svg";
 import Image from "next/image";
 import Chain from "../../../public/icons/link.svg";
+import Dialog from "@/components/Dialog";
 import Maximize from "../../../public/icons/maximize.svg";
 import Minimize from "../../../public/icons/minimize.svg";
 import { projectsData } from "@/data/projects";
@@ -19,7 +20,6 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import Dialog from "@/components/Dialog";
 
 export default function Detail({ params }: { params: Promise<{ slug: string }> }) {
   const router = useRouter();
@@ -68,6 +68,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
             >
               <Maximize className="text-sm" />
             </div>
+
             {data?.images?.map((img, index) => (
               <SwiperSlide key={index} className="relative rounded-2xl aspect-[360/279]">
                 <Image
@@ -161,11 +162,12 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
           }}
         >
           <div
-            className="z-999 fixed top-4 right-5 w-7 h-7 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer text-gray-700 hover:text-gray-900 flex items-center justify-center"
+            className="z-999 fixed top-3 right-9 w-7 h-7 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer text-gray-700 hover:text-gray-900 flex items-center justify-center"
             onClick={handleDialogClose}
           >
             <Minimize className="text-sm" />
           </div>
+
           {data?.images?.map((img, index) => (
             <SwiperSlide key={index} className="rounded-2xl">
               <Image

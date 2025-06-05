@@ -62,3 +62,13 @@
     @apply opacity-50;
   }
 }
+
+@media (height <= 600px) {
+  .nav-text {
+    @apply text-sm;
+  }
+
+  .max-h-for-small-screen {
+    @apply lg:max-h-[calc(100dvh-100px)];
+  }
+}
