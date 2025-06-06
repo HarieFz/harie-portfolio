@@ -5,7 +5,7 @@ export default function About() {
     <section id="about">
       <div className="lg:mb-8 lg:px-6">
         <div className="lg:hidden block w-fit mb-3">
-          <h1 className="font-bold text-xs text-white mb-2">ABOUT</h1>
+          <h2 className="font-bold text-xs text-white mb-2">ABOUT</h2>
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 

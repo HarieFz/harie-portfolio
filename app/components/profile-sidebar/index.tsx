@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useContext } from "react";
-import Harie from "../../../public/images/harie.jpg";
 import Github from "../../../public/icons/github.svg";
 import LinkedIn from "../../../public/icons/linkedin.svg";
 import Mail from "../../../public/icons/mail.svg";
@@ -34,28 +33,29 @@ export default function ProfileSidebar() {
   return (
     <>
       {/* Profile */}
-      <div>
-        <div className="w-22.5 h-22.5 lg:w-25 lg:h-25 rounded-full overflow-hidden lg:mb-6 mb-3">
+      <section>
+        <div className="w-22.5 h-22.5 lg:w-25 lg:h-25 xl:w-30 xl:h-30 rounded-full overflow-hidden lg:mb-6 mb-3">
           <Image
-            src={Harie}
+            src="https://res.cloudinary.com/harie/image/upload/v1749224649/Profile_Photo_Circle_qvl9ue.png"
             alt="Harie"
             width={0}
             height={0}
             sizes="100%"
-            className="w-full h-full object-[50%_60%] object-cover scale-200"
+            className="w-full h-full object-cover scale-120 shadow"
+            priority
           />
         </div>
         <div>
           <h1 className="2xl:text-[40px] lg:text-3xl text-2xl text-white 2xl:mb-3 mb-1.5">HARIE FAIRUZ ZAKI</h1>
-          <h2 className="2xl:text-2xl lg:text-lg text-xs text-white 2xl:mb-6 mb-3">Front-End Web Developer</h2>
+          <p className="2xl:text-2xl lg:text-lg text-xs text-white 2xl:mb-6 mb-3">Front-End Web Developer</p>
           <p className="2xl:text-base lg:text-sm text-2xs text-white">
             I build accessible, pixel-perfect digital experiences for the web.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Navigation */}
-      <nav className="lg:block hidden">
+      <nav role="navigation" className="lg:block hidden">
         <ul className="flex flex-col 2xl:gap-3.75 gap-1.5">
           {nav.map((item) => (
             <li
@@ -80,11 +80,12 @@ export default function ProfileSidebar() {
         </ul>
       </nav>
 
-      {/* Social Media */}
-      <div className="flex items-center lg:gap-6 gap-3 max-lg:mt-3" onMouseMove={handleMouseMove}>
+      {/* Contact */}
+      <section className="flex items-center lg:gap-6 gap-3 max-lg:mt-3" onMouseMove={handleMouseMove}>
         <Link
           href="https://github.com/HarieFz"
           target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Github")}
           onMouseLeave={handleMouseLeave}
         >
@@ -93,6 +94,7 @@ export default function ProfileSidebar() {
         <Link
           href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/"
           target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "LinkedIn")}
           onMouseLeave={handleMouseLeave}
         >
@@ -108,6 +110,7 @@ export default function ProfileSidebar() {
         <Link
           href="https://www.instagram.com/hariefairuz/"
           target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Instagram")}
           onMouseLeave={handleMouseLeave}
         >
@@ -116,6 +119,7 @@ export default function ProfileSidebar() {
         <Link
           href="https://api.whatsapp.com/send?phone=6285928993274"
           target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Whatsapp")}
           onMouseLeave={handleMouseLeave}
         >
@@ -129,7 +133,7 @@ export default function ProfileSidebar() {
         >
           <Resume className="xl:w-6 xl:h-6 w-4 h-4 text-[#EBEDF0]/80 hover:text-white" />
         </Link>
-      </div>
+      </section>
 
       {/* Tooltip */}
       <Tooltip tooltip={tooltip} />

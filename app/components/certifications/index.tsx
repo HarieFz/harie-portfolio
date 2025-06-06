@@ -9,7 +9,7 @@ export default function Certifications() {
     <section id="certifications">
       <div className="lg:mb-8">
         <div className="lg:hidden block w-fit">
-          <h1 className="font-bold text-xs text-white mb-2">CERTIFICATIONS</h1>
+          <h2 className="font-bold text-xs text-white mb-2">CERTIFICATIONS</h2>
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 
@@ -30,8 +30,8 @@ export default function Certifications() {
 
                 <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
                   <div>
-                    <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h1>
-                    <h2 className="lg:text-xl text-xs text-[#EBEDF0]/80 lg:mb-3 mb-2">{item.issuing_organization}</h2>
+                    <h3 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h3>
+                    <p className="lg:text-xl text-xs text-[#EBEDF0]/80 lg:mb-3 mb-2">{item.issuing_organization}</p>
 
                     <div className="block lg:hidden w-32.5 h-22.5 mb-3">
                       <Image

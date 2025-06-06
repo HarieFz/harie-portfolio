@@ -21,6 +21,7 @@ import "swiper/css/thumbs";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Detail({ params }: { params: Promise<{ slug: string }> }) {
   const router = useRouter();
@@ -45,6 +46,9 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
 
   return (
     <>
+      <Head>
+        <title>Project Detail | Harie Fairuz Zaki - Front-End Web Developer</title>
+      </Head>
       <button onClick={() => router.back()} className="flex items-center gap-3 mb-3 cursor-pointer">
         <ArrowLeft className="text-[14px] text-white" />
         <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
@@ -111,7 +115,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
 
         <div className="lg:col-span-7 flex flex-col lg:gap-6 gap-3">
           <div>
-            <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{data?.title}</h1>
+            <p className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{data?.title}</p>
             <div
               dangerouslySetInnerHTML={{ __html: data?.description ?? "" }}
               className="text-justify hyphens-auto lg:text-base text-2xs text-white"

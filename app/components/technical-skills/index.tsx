@@ -35,7 +35,7 @@ export default function TechnicalSkills() {
     <section id="technical-skills">
       <div className="lg:mb-8">
         <div className="lg:hidden block w-fit mb-3">
-          <h1 className="font-bold text-xs text-white mb-2">TECHNICAL SKILLS</h1>
+          <h2 className="font-bold text-xs text-white mb-2">TECHNICAL SKILLS</h2>
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 
@@ -44,7 +44,7 @@ export default function TechnicalSkills() {
             <div key={index}>
               <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:pe-6">
                 <div className="lg:col-span-3 max-lg:mb-3">
-                  <p className="lg:text-base text-xs text-[#EBEDF0]/80">{item.title}</p>
+                  <h3 className="lg:text-base text-xs text-[#EBEDF0]/80">{item.title}</h3>
                 </div>
                 <div className="lg:col-span-9 flex flex-wrap items-center gap-3">
                   {item.tech.map((tech, i) => (

@@ -7,10 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { slugify } from "@/utils/slugify";
 import { projectsData } from "@/data/projects";
+import Head from "next/head";
 
 export default function Projects() {
   return (
     <>
+      <Head>
+        <title>All Projects | Harie Fairuz Zaki - Front-End Web Developer</title>
+      </Head>
+
       <Link href="/" className="flex items-center gap-3 mb-3">
         <ArrowLeft className="text-[14px] text-white" />
         <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
@@ -40,7 +45,7 @@ export default function Projects() {
 
             <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
               <div>
-                <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h1>
+                <p className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</p>
                 <div className="lg:hidden block w-[116.5px] h-22.5 mb-3">
                   <Image
                     src={item.thumbnail}

@@ -6,6 +6,7 @@
 @theme {
   --color-dark-navy: #0f172a;
 
+  --font-inter: var(--font-inter);
   --text-2xs: 10px;
 }
 

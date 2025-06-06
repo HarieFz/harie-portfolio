@@ -11,7 +11,7 @@ export default function Projects() {
     <section id="projects">
       <div className="lg:mb-8 flex flex-col gap-3">
         <div className="lg:hidden block w-fit">
-          <h1 className="font-bold text-xs text-white mb-2">PROJECTS</h1>
+          <h2 className="font-bold text-xs text-white mb-2">PROJECTS</h2>
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 
@@ -31,7 +31,7 @@ export default function Projects() {
 
               <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
                 <div>
-                  <h1 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h1>
+                  <h3 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h3>
                   <div className="lg:hidden block w-[116.5px] h-22.5 mb-3 rounded-lg">
                     <Image
                       src={item.thumbnail}
