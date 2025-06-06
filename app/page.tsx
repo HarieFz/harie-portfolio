@@ -10,6 +10,7 @@ import Certifications from "./components/certifications";
 import Footer from "./components/footer";
 import useInView from "./hooks/useInView";
 import ProfileSidebar from "./components/profile-sidebar";
+import Head from "next/head";
 
 export default function Home() {
   const { setHighlight } = useContext(HighlightContext);
@@ -41,6 +42,10 @@ export default function Home() {
 
   return (
     <div className="h-dvh">
+      <Head>
+        <link rel="canonical" href="https://harie-portfolio.vercel.app/" key="canonical" />
+      </Head>
+
       <div className="lg:h-full lg:overflow-hidden">
         <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
           <div className="w-full h-full lg:flex lg:items-center lg:justify-center">
