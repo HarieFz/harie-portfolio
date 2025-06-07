@@ -96,6 +96,40 @@ const projectsData: ProjectTypes[] = [
     },
     tech: ["React.js", "Vite", "TailwindCSS", "Recharts", "React Router", "React Paginate"],
   },
+  {
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/1-edu-world_drkxva.png`,
+    images: [
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/1-edu-world_drkxva.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/2-edu-world_hhad0v.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/3-edu-world_cmkboz.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/4-edu-world_cguonc.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325791/5-edu-world_x9ly15.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/6-edu-world_ta0xux.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325790/7-edu-world_latfd8.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/8-edu-world_hj0qmm.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/9-edu-world_j26fxr.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/10-edu-world_gxjbj4.png",
+    ],
+    title: "Edu World",
+    description: `
+    <p class="mb-6">Edu World is a web-based Learning Management System (LMS) designed specifically for instructors to manage and deliver online courses efficiently. The platform provides a streamlined interface that empowers instructors to focus on teaching while easily organizing course content, monitoring student progress, and handling assignments.</p>
+
+    <p class="font-bold mb-1">Key features of the application include:</p>
+
+    <ul class="list-inside list-disc mb-6">
+      <li>A clean, professional dashboard tailored for instructor workflows.</li>
+      <li>Course management tools to create, update, and delete courses with ease.</li>
+      <li>Modular learning content management, allowing instructors to build and organize structured learning modules.</li>
+      <li>Student management, providing insights into enrolled learners and their activity.</li>
+      <li>Assignment creation and tracking, enabling instructors to post tasks and review student submissions.</li>
+      <li>A responsive landing page that introduces the platform and guides users to the instructor login.</li>
+    </ul>
+
+    <p>Edu World focuses on clarity, usability, and functionality, making it an effective tool for instructors to manage digital learning environments with confidence and control.</p>
+    `,
+    demo: undefined,
+    tech: ["React.js", "Redux", "RTK Query", "Bootstrap"],
+  },
 ];
 
 export { projectsData };
