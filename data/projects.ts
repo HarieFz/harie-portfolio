@@ -110,7 +110,7 @@ const projectsData: ProjectTypes[] = [
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/9-edu-world_j26fxr.png",
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/10-edu-world_gxjbj4.png",
     ],
-    title: "Edu World",
+    title: "Edu World - Learning Management System",
     description: `
     <p class="mb-6">Edu World is a web-based Learning Management System (LMS) designed specifically for instructors to manage and deliver online courses efficiently. The platform provides a streamlined interface that empowers instructors to focus on teaching while easily organizing course content, monitoring student progress, and handling assignments.</p>
 
@@ -129,6 +129,50 @@ const projectsData: ProjectTypes[] = [
     `,
     demo: undefined,
     tech: ["React.js", "Redux", "RTK Query", "Bootstrap"],
+  },
+  {
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749329530/secondhand/1-secondhand-Home_mr2gcv.png`,
+    images: [
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329530/secondhand/1-secondhand-Home_mr2gcv.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329530/secondhand/3-secondhand-Login_yptvyh.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329530/secondhand/4-secondhand-Register_pxbug4.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329529/secondhand/2-secondhand-Info_profil_b0hgux.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329648/secondhand/Buyer/5-secondhand-Halaman_produk_tqq5ve.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329649/secondhand/Buyer/8-secondhand-Halaman_produk-3_vfv8tv.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329648/secondhand/Buyer/6-secondhand-Halaman__produk-1_jdtsvd.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329649/secondhand/Buyer/7-secondhand-Halaman_produk-2_sw1aov.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329673/secondhand/Seller/13-secondhand-Info_produk_dtsy65.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329672/secondhand/Seller/12-secondhand-Halaman_produk_iejglz.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329678/secondhand/Seller/9-secondhand-Daftar_jual_geaaqx.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329671/secondhand/Seller/11-secondhand-Daftar_jual-2_wqcmtz.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329678/secondhand/Seller/19-secondhand-Notifikasi_hs93js.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329674/secondhand/Seller/14-secondhand-Info_produk-1_axtiex.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329674/secondhand/Seller/15-secondhand-Info_produk-3_pzduff.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329675/secondhand/Seller/16-secondhand-Info_produk-4_gjkiwu.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329676/secondhand/Seller/17-secondhand-Info_produk-2_fuhpct.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329677/secondhand/Seller/18-secondhand-Info_produk-5_rbrkzi.png",
+    ],
+    title: "Secondhand - E-commerce",
+    description: `
+    <p class="mb-6">SecondHand is an online e-commerce platform dedicated to buying and selling secondhand items across a variety of categories. Built to be accessible and flexible, the platform allows users to act as both buyers and sellers using a single account, making the trading process simple and community-driven.</p>
+    <p class="mb-6">The platform facilitates direct negotiation between users and encourages independent transactions outside the platform, giving users full control over their buying and selling experience.</p>
+
+    <p class="font-bold mb-1">Key features of the application include:</p>
+
+    <ul class="list-inside list-disc mb-6">
+      <li>Unified registration system (email & password) for both buying and selling.</li>
+      <li>Interactive seller dashboard for managing listings, complete with image upload, item details, pricing, and location.</li>
+      <li>Buyer experience with product browsing, detailed listing view, and a locally stored wishlist.</li>
+      <li>Transaction history tracking for both buyer and seller roles, helping users keep record of their activities.</li>
+      <li>In-app notification system (bell icon) for real-time alerts and interactions.</li>
+      <li>User profiles with photo, contact number, and address for better transaction trust and clarity.</li>
+      <li>Product listings are categorized into five main categories, with a maximum of four active posts per user to maintain listing quality.</li>
+    </ul>
+
+    <p>SecondHand offers a straightforward, user-friendly experience for those looking to give pre-loved items a second life through meaningful, peer-to-peer exchange.</p>
+    `,
+    demo: undefined,
+    tech: ["React.js", "Express.js", "Axios", "Bootstrap"],
   },
 ];
 

@@ -26,8 +26,8 @@ const certificationsData: CertificationsTypes[] = [
     issuing_organization: "Alterra Academy",
     description: `<p class="lg:mb-2 mb-1">Learned front-end engineering using React.js, React Hooks, React Router, state management, GraphQL (Apollo), Git, clean code practices, and testing.</p> <p>Project: led the React.js team in developing a Learning Management System (LMS); collaborated with UI/UX designers, back-end, and QA teams; delivered a functional learning platform with responsive UI and integrated front-end with RESTful APIs.</p>`,
     demo: {
-      name: "Learning Management System",
-      link: "https://personal-portfolio-by-jcrea-design.vercel.app/",
+      name: "Edu World - Learning Management System",
+      link: "/projects/edu-world-learning-management-system",
     },
     tech: ["React.js", "Next.js", "React Router", "GraphQL", "Git"],
   },
@@ -43,8 +43,8 @@ const certificationsData: CertificationsTypes[] = [
     issuing_organization: "Binar Academy",
     description: `<p class="lg:mb-2 mb-1">Learned fullstack web development with JavaScript, Node.js, Express, PostgreSQL, React.js, RESTful API, Git, and Agile methodology.</p> <p>Project: led a cross-functional team (frontend & backend) to build an e-commerce platform; managed team coordination, ensured backend–frontend integration, and delivered a fully functional MVP with additional features.</p>`,
     demo: {
-      name: "E-Commerce",
-      link: "https://personal-portfolio-by-jcrea-design.vercel.app/",
+      name: "Secondhand - E-commerce",
+      link: "/projects/secondhand-e-commerce",
     },
     tech: ["React.js", "Next.js", "Express.js", "Javascript", "Git"],
   },

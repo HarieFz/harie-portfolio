@@ -36,7 +36,7 @@
   }
 
   .gradient-border {
-    @apply relative rounded-lg transition-all
+    @apply relative rounded-lg transition-all lg:hover:bg-[#334155]/60 lg:hover:backdrop-blur-xs
     before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent 
     before:[background:linear-gradient(180deg,rgba(36,137,255,1),rgba(255,255,255,0))_border-box] 
     before:[mask-composite:exclude_!important] before:[mask:linear-gradient(black_0_0)_padding-box,_linear-gradient(black_0_0)];

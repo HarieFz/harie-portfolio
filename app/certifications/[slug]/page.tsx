@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import ArrowLeft from "../../../public/icons/arrow-left.svg";
 import Image from "next/image";
@@ -30,6 +30,9 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
   const [mainSwiper, setMainSwiper] = useState<SwiperClass | null>(null);
   const [open, setOpen] = useState<boolean>(false);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
+  const dialogContentRef = useRef<HTMLDivElement>(null);
+  const prevButtonRef = useRef<HTMLDivElement>(null);
+  const nextButtonRef = useRef<HTMLDivElement>(null);
 
   const data = certificationsData.find((project) => slugify(project.title) === slug);
 
@@ -43,6 +46,23 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
   const handleDialogClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        nextButtonRef.current?.click();
+      } else if (e.key === "ArrowLeft") {
+        prevButtonRef.current?.click();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
 
   return (
     <>
@@ -148,7 +168,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
         </div>
       </div>
 
-      <Dialog open={open} onClose={handleDialogClose}>
+      <Dialog ref={dialogContentRef} open={open} onClose={handleDialogClose}>
         {/* Konten Dialog */}
         <Swiper
           spaceBetween={10}
@@ -196,7 +216,11 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
         </Swiper>
 
         {/* Sticky Navigation Buttons */}
-        <div className="hidden swiper-button-prev-custom absolute 2xl:-left-20 xl:-left-14 lg:-left-12 top-1/2 -translate-y-1/2 z-10 2xl:w-10 2xl:h-10 xl:w-8 xl:h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer lg:flex items-center justify-center group">
+        <div
+          ref={prevButtonRef}
+          className="hidden swiper-button-prev-custom absolute 2xl:-left-20 xl:-left-14 lg:-left-12 top-1/2 -translate-y-1/2 z-10 2xl:w-10 2xl:h-10 xl:w-8 xl:h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer lg:flex items-center justify-center group"
+          onClick={() => dialogContentRef.current?.scrollTo({ top: 0, behavior: "instant" })}
+        >
           <svg
             className="w-6 h-6 text-gray-700 group-hover:text-gray-900"
             fill="none"
@@ -207,7 +231,11 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
           </svg>
         </div>
 
-        <div className="hidden swiper-button-next-custom absolute 2xl:-right-20 xl:-right-14 lg:-right-12 top-1/2 -translate-y-1/2 z-10 2xl:w-10 2xl:h-10 xl:w-8 xl:h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer lg:flex items-center justify-center group">
+        <div
+          ref={nextButtonRef}
+          className="hidden swiper-button-next-custom absolute 2xl:-right-20 xl:-right-14 lg:-right-12 top-1/2 -translate-y-1/2 z-10 2xl:w-10 2xl:h-10 xl:w-8 xl:h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/90 transition-all cursor-pointer lg:flex items-center justify-center group"
+          onClick={() => dialogContentRef.current?.scrollTo({ top: 0, behavior: "instant" })}
+        >
           <svg
             className="w-6 h-6 text-gray-700 group-hover:text-gray-900"
             fill="none"

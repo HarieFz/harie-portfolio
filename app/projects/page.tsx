@@ -62,10 +62,12 @@ export default function Projects() {
                   className="text-justify hyphens-auto lg:text-base text-2xs text-white line-clamp-4"
                 ></div>
               </div>
-              <div className="flex items-center gap-2">
-                <Chain />
-                <p className="font-bold lg:text-xs text-2xs text-white">{item?.demo?.name}</p>
-              </div>
+              {item?.demo?.name && (
+                <div className="flex items-center gap-2">
+                  <Chain />
+                  <p className="font-bold lg:text-xs text-2xs text-white">{item.demo.name}</p>
+                </div>
+              )}
 
               <div className="flex flex-wrap items-center lg:gap-3 gap-2">
                 {item.tech.map((tech, i) => (

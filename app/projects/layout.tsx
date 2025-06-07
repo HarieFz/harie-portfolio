@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full lg:mt-10 mx-auto">
+    <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full lg:my-10 mx-auto">
       <Head>
         <link rel="canonical" href="https://harie-portfolio.vercel.app/projects" key="canonical" />
       </Head>

@@ -15,7 +15,7 @@ export default function Projects() {
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 
-        {projectsData.map((item, index, { length }) => (
+        {projectsData.slice(0, 3).map((item, index, { length }) => (
           <Link href={`/projects/${slugify(item.title)}`} key={index}>
             <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3 hover-gradient-border">
               <div className="realtive hidden lg:block col-span-3 aspect-[155/120] rounded-lg">
