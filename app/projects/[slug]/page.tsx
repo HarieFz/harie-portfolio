@@ -129,7 +129,12 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
               <p className="font-bold lg:text-base text-xs text-white mb-3">Demo</p>
               <div className="flex items-center gap-2">
                 <Chain />
-                <Link href={data?.demo?.link} className="font-bold lg:text-xs text-2xs text-white">
+                <Link
+                  href={data?.demo?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold lg:text-xs text-2xs text-white"
+                >
                   {data?.demo?.name}
                 </Link>
               </div>

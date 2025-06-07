@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  compiler: {
+    styledComponents: {
+      minify: true,
+    },
+  },
+  compress: true,
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;
