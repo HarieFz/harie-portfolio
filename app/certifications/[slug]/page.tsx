@@ -84,6 +84,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
                   height={0}
                   sizes="100vw"
                   className="w-full h-full object-cover object-top rounded-[inherit]"
+                  loading={index + 1 ? "lazy" : "eager"}
                 />
               </SwiperSlide>
             ))}
@@ -107,6 +108,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
                     height={0}
                     sizes="100vw"
                     className="w-20 h-15.5 object-cover rounded-[inherit]"
+                    loading="lazy"
                   />
                 </SwiperSlide>
               ))}

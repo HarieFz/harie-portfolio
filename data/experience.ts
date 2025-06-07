@@ -1,4 +1,4 @@
-interface Experiencetypes {
+interface ExperienceTypes {
   start_date: string;
   end_date: string;
   title: string;
@@ -8,7 +8,7 @@ interface Experiencetypes {
   tech: string[];
 }
 
-const experienceData: Experiencetypes[] = [
+const experienceData: ExperienceTypes[] = [
   {
     start_date: "Apr 2024",
     end_date: "Present",

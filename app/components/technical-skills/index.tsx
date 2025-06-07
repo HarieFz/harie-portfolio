@@ -1,34 +1,5 @@
 import React from "react";
-
-const data = [
-  {
-    title: "Core Web Development",
-    tech: ["HTML5", "CSS", "Javascript", "Typescript"],
-  },
-  {
-    title: "Frontend Frameworks & Libraries",
-    tech: [
-      "React.js",
-      "Next.js",
-      "Tailwind",
-      "Material UI",
-      "React Router",
-      "Redux / Redux Toolkit",
-      "React Hook Form",
-      "Zod",
-      "Rechart",
-      "Framer Motion",
-    ],
-  },
-  {
-    title: "API & Data Handling",
-    tech: ["REST API", "Fetch", "Axios", "TanStack Query (React Query)", "SWR", "RTK Query", "Firebase"],
-  },
-  {
-    title: "Tools & Collaboration",
-    tech: ["Figma", "Git", "Github", "Postman", "Swagger", "Scrum", "Agile Methodologies"],
-  },
-];
+import { technicalSkillsData } from "@/data/technicalSkills";
 
 export default function TechnicalSkills() {
   return (
@@ -40,7 +11,7 @@ export default function TechnicalSkills() {
         </div>
 
         <div className="lg:ps-6 lg:py-6">
-          {data.map((item, index, { length }) => (
+          {technicalSkillsData?.map((item, index, { length }) => (
             <div key={index}>
               <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:pe-6">
                 <div className="lg:col-span-3 max-lg:mb-3">

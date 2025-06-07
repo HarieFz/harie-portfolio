@@ -26,6 +26,7 @@ export default function Projects() {
                   height={0}
                   sizes="100vw"
                   className="w-full h-full object-cover object-top rounded-[inherit]"
+                  loading="lazy"
                 />
               </div>
 
@@ -40,6 +41,7 @@ export default function Projects() {
                       height={0}
                       sizes="100vw"
                       className="w-full h-full object-cover object-top rounded-[inherit]"
+                      loading="lazy"
                     />
                   </div>
 

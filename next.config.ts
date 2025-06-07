@@ -13,16 +13,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "swiperjs.com",
-        port: "",
-        pathname: "/demos/images/**",
-        search: "",
-      },
-      {
-        protocol: "https",
         hostname: "res.cloudinary.com",
         port: "",
-        pathname: "/harie/image/upload/**",
+        pathname: "/harie/image/upload/q_auto/**",
         search: "",
       },
     ],

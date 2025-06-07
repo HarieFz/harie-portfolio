@@ -36,7 +36,7 @@ export default function ProfileSidebar() {
       <section>
         <div className="w-22.5 h-22.5 lg:w-25 lg:h-25 xl:w-30 xl:h-30 rounded-full overflow-hidden lg:mb-6 mb-3">
           <Image
-            src="https://res.cloudinary.com/harie/image/upload/v1749224649/Profile_Photo_Circle_qvl9ue.png"
+            src="https://res.cloudinary.com/harie/image/upload/q_auto/v1749224649/Profile_Photo_Circle_qvl9ue.png"
             alt="Harie"
             width={0}
             height={0}
@@ -84,6 +84,7 @@ export default function ProfileSidebar() {
       <section className="flex items-center lg:gap-6 gap-3 max-lg:mt-3" onMouseMove={handleMouseMove}>
         <Link
           href="https://github.com/HarieFz"
+          aria-label="github"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Github")}
@@ -93,6 +94,7 @@ export default function ProfileSidebar() {
         </Link>
         <Link
           href="https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/"
+          aria-label="linkedin"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "LinkedIn")}
@@ -102,6 +104,7 @@ export default function ProfileSidebar() {
         </Link>
         <Link
           href="mailto:hfairuzzaki@gmail.com"
+          aria-label="gmail"
           onMouseEnter={(e) => handleMouseEnter(e, "Gmail")}
           onMouseLeave={handleMouseLeave}
         >
@@ -109,6 +112,7 @@ export default function ProfileSidebar() {
         </Link>
         <Link
           href="https://www.instagram.com/hariefairuz/"
+          aria-label="instagram"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Instagram")}
@@ -118,6 +122,7 @@ export default function ProfileSidebar() {
         </Link>
         <Link
           href="https://api.whatsapp.com/send?phone=6285928993274"
+          aria-label="whatsapp"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(e, "Whatsapp")}
@@ -127,6 +132,7 @@ export default function ProfileSidebar() {
         </Link>
         <Link
           href="/resume/HARIE-FAIRUZ-ZAKI_RESUME.pdf"
+          aria-label="resume"
           download="HARIE FAIRUZ ZAKI_RESUME"
           onMouseEnter={(e) => handleMouseEnter(e, "Resume")}
           onMouseLeave={handleMouseLeave}

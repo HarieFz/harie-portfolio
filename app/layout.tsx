@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Hi! I'm Harie Fairuz Zaki, a front-end web developer passionate about crafting intuitive, responsive, and visually engaging websites, with a focus on building web applications using React.js and Next.js. I'm currently open to job opportunities—let's connect!",
     type: "website",
     url: "https://harie-portfolio.vercel.app/",
-    images: "https://res.cloudinary.com/harie/image/upload/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
+    images: "https://res.cloudinary.com/harie/image/upload/q_auto/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
     siteName: "Harie Fairuz Zaki Portfolio",
   },
   twitter: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Harie Fairuz Zaki",
     description:
       "Hi! I'm Harie Fairuz Zaki, a front-end web developer passionate about crafting intuitive, responsive, and visually engaging websites, with a focus on building web applications using React.js and Next.js. I'm currently open to job opportunities—let's connect!",
-    images: "https://res.cloudinary.com/harie/image/upload/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
+    images: "https://res.cloudinary.com/harie/image/upload/q_auto/v1749025011/Profile_Photo_-_mini_eipm1x.jpg",
     creator: "Harie Fairuz Zaki",
   },
 };

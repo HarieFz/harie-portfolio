@@ -14,13 +14,13 @@ interface CertificationsTypes {
 const certificationsData: CertificationsTypes[] = [
   {
     thumbnail:
-      "https://res.cloudinary.com/harie/image/upload/v1749109384/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0001_sfrtee.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109384/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0001_sfrtee.jpg",
     images: [
-      "https://res.cloudinary.com/harie/image/upload/v1749109384/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0001_sfrtee.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109385/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0002_qedoys.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109372/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0001_gd0w9b.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109371/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0002_uayawl.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109371/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0003_e99buw.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109384/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0001_sfrtee.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109385/Sertifikat_170_SER_B2G-MKP_XII_2022_-_HARIE_FAIRUZZAKI_page-0002_qedoys.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109372/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0001_gd0w9b.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109371/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0002_uayawl.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109371/Raport_Mahasiswa_-_A_HARIE_FAIRUZZAKI_page-0003_e99buw.jpg",
     ],
     title: "How to be an Ideal Top Search ReactJS Front-End Engineer Program",
     issuing_organization: "Alterra Academy",
@@ -33,11 +33,11 @@ const certificationsData: CertificationsTypes[] = [
   },
   {
     thumbnail:
-      "https://res.cloudinary.com/harie/image/upload/v1749109346/Studi_Independen_Cert_Harie_Fairuzzaki_page-0001_lw0nn0.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109346/Studi_Independen_Cert_Harie_Fairuzzaki_page-0001_lw0nn0.jpg",
     images: [
-      "https://res.cloudinary.com/harie/image/upload/v1749109346/Studi_Independen_Cert_Harie_Fairuzzaki_page-0001_lw0nn0.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109342/KM_2_SR_FSW2202KM251_Harie_Fairuzzaki_page-0001_t4camd.jpg",
-      "https://res.cloudinary.com/harie/image/upload/v1749109342/KM_2_SR_FSW2202KM251_Harie_Fairuzzaki_page-0002_cgpies.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109346/Studi_Independen_Cert_Harie_Fairuzzaki_page-0001_lw0nn0.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109342/KM_2_SR_FSW2202KM251_Harie_Fairuzzaki_page-0001_t4camd.jpg",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749109342/KM_2_SR_FSW2202KM251_Harie_Fairuzzaki_page-0002_cgpies.jpg",
     ],
     title: "Fullstack Web Development Wave 2",
     issuing_organization: "Binar Academy",

@@ -1,4 +1,4 @@
-interface Project {
+interface ProjectTypes {
   thumbnail: string;
   images: string[];
   title: string;
@@ -7,10 +7,12 @@ interface Project {
   tech: string[];
 }
 
-const projectsData: Project[] = [
+const projectsData: ProjectTypes[] = [
   {
-    thumbnail: `https://res.cloudinary.com/harie/image/upload/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png`,
-    images: ["https://res.cloudinary.com/harie/image/upload/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png"],
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png`,
+    images: [
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png",
+    ],
     title: "JCREA — Personal Portfolio Website for Product Designer",
     description: `
     <p class="mb-6">JCREA is a modern, and visually captivating personal portfolio website built for a product designer to showcase services, work experience, portfolio projects, client testimonials, and blog posts. The goal is to provide a professional digital presence that communicates skills, achievements, and creativity, while also encouraging potential clients or employers to get in touch.</p> 
@@ -33,12 +35,12 @@ const projectsData: Project[] = [
     tech: ["Next.js", "TailwindCSS", "Framer Motion", "Swiper", "@svgr/webpack"],
   },
   {
-    thumbnail: `https://res.cloudinary.com/harie/image/upload/v1749019784/ai-product-landing-tools_tpfhz8.png`,
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749019784/ai-product-landing-tools_tpfhz8.png`,
     images: [
-      "https://res.cloudinary.com/harie/image/upload/v1749019784/ai-product-landing-tools_tpfhz8.png",
-      "https://res.cloudinary.com/harie/image/upload/v1749030662/ai-product-tools-landing-vercel-app-signup_mofvan.png",
-      "https://res.cloudinary.com/harie/image/upload/v1749030662/ai-product-tools-landing-vercel-app-signin_rlwfbg.png",
-      "https://res.cloudinary.com/harie/image/upload/v1749030662/ai-product-tools-landing-vercel-app-forgotpassword_cjkn7q.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749019784/ai-product-landing-tools_tpfhz8.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749030662/ai-product-tools-landing-vercel-app-signup_mofvan.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749030662/ai-product-tools-landing-vercel-app-signin_rlwfbg.png",
+      "https://res.cloudinary.com/harie/image/upload/q_auto/v1749030662/ai-product-tools-landing-vercel-app-forgotpassword_cjkn7q.png",
     ],
     title: "AI Product Tools – Modern Landing Page",
     description: `
@@ -63,8 +65,8 @@ const projectsData: Project[] = [
     tech: ["Next.js", "TailwindCSS", "aos", "@headlessui/react", "@svgr/webpack"],
   },
   {
-    thumbnail: `https://res.cloudinary.com/harie/image/upload/v1749019816/admin-dashboard-dashlite_aafgbe.png`,
-    images: ["https://res.cloudinary.com/harie/image/upload/v1749019816/admin-dashboard-dashlite_aafgbe.png"],
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749019816/admin-dashboard-dashlite_aafgbe.png`,
+    images: ["https://res.cloudinary.com/harie/image/upload/q_auto/v1749019816/admin-dashboard-dashlite_aafgbe.png"],
     title: "DashLite – Admin Dashboard UI",
     description: `
     <p class="mb-6">DashLite is a modern, admin dashboard UI template built for showcasing eCommerce analytics, product performance, and sales insights.</p> 
@@ -97,4 +99,4 @@ const projectsData: Project[] = [
 ];
 
 export { projectsData };
-export type { Project };
+export type { ProjectTypes };

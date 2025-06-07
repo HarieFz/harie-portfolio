@@ -20,11 +20,12 @@ export default function Certifications() {
                 <div className="hidden lg:block lg:col-span-3 w-full lg:aspect-[155/120] lg:shrink-0">
                   <Image
                     src={item.thumbnail}
-                    alt="certificate-1"
+                    alt={`certificate-${index + 1}`}
                     width={0}
                     height={0}
                     sizes="100vw"
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
                   />
                 </div>
 
@@ -36,11 +37,12 @@ export default function Certifications() {
                     <div className="block lg:hidden w-32.5 h-22.5 mb-3">
                       <Image
                         src={item.thumbnail}
-                        alt="certificate-1"
+                        alt={`certificate-${index + 1}`}
                         width={0}
                         height={0}
                         sizes="100vw"
                         className="w-full h-full object-cover rounded-lg"
+                        loading="lazy"
                       />
                     </div>
 
