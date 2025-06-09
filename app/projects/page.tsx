@@ -21,7 +21,9 @@ export default function Projects() {
         <p className="lg:text-2xl text-xs text-white">Harie Fairuz Zaki</p>
       </Link>
 
-      <h1 className="font-bold lg:text-[40px] text-xl text-white">All Projects</h1>
+      <h1 className="font-bold lg:text-[40px] text-xl text-white">
+        All Projects <span className="text-[#EBEDF0]/80">({projectsData.length})</span>
+      </h1>
 
       <div className="w-full h-[0.5px] lg:my-8 my-3 bg-[#EBEDF0]/40" />
 

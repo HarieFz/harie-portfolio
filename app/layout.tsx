@@ -135,7 +135,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased font-inter relative bg-dark-navy max-lg:py-8 max-lg:px-6`}>
+      <body className={`${inter.variable} antialiased relative bg-dark-navy max-lg:py-8 max-lg:px-6`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -32,7 +32,7 @@ export default function Experience() {
                   </div>
                   <div className="flex flex-wrap items-center gap-4">
                     {item?.demo?.map((web, index) => (
-                      <Link key={index} href={web?.link} target="_blank" className="flex items-center gap-2">
+                      <Link key={index} href={web?.link} className="flex items-center gap-2">
                         <Chain />
                         <p className="font-bold lg:text-xs text-2xs text-white">{web?.name}</p>
                       </Link>

@@ -31,10 +31,6 @@
     @apply bg-[#2489FF]/40;
   }
 
-  body {
-    font-family: "inter", sans-serif;
-  }
-
   .gradient-border {
     @apply relative rounded-lg transition-all lg:hover:bg-[#334155]/60 lg:hover:backdrop-blur-xs
     before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent 

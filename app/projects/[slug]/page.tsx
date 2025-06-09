@@ -215,7 +215,7 @@ export default function Detail({ params }: { params: Promise<{ slug: string }> }
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-full object-cover object-top rounded-[inherit]"
+                className="w-full h-full object-contain object-top rounded-[inherit]"
               />
             </SwiperSlide>
           ))}
