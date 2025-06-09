@@ -46,14 +46,14 @@ export default function Home() {
         <link rel="canonical" href="https://harie-portfolio.vercel.app/" key="canonical" />
       </Head>
 
-      <div className="lg:h-full lg:overflow-hidden">
+      <div className="md:h-full md:overflow-hidden">
         <div className="relative 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl w-full h-full mx-auto">
           <div className="w-full h-full lg:flex lg:items-center lg:justify-center">
-            <div className="lg:grid lg:grid-cols-12 lg:gap-5 lg:max-h-[calc(100dvh-200px)] max-h-for-small-screen h-full">
-              <aside className="lg:col-span-5 flex flex-col justify-between lg:max-h-[600px] max-lg:mb-5">
+            <div className="md:grid md:grid-cols-12 md:gap-5 lg:max-h-[calc(100dvh-200px)] max-h-for-small-screen h-full">
+              <aside className="md:col-span-5 flex flex-col justify-between md:max-h-[400px] lg:max-h-[600px] max-lg:mb-5">
                 <ProfileSidebar />
               </aside>
-              <main className="lg:col-span-7 flex flex-col lg:gap-8 gap-6 lg:overflow-y-auto">
+              <main className="md:col-span-7 flex flex-col lg:gap-8 gap-6 md:overflow-y-auto md:pe-1">
                 <About />
                 <Experience />
                 <Projects />

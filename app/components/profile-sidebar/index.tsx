@@ -55,7 +55,7 @@ export default function ProfileSidebar() {
       </section>
 
       {/* Navigation */}
-      <nav role="navigation" className="lg:block hidden">
+      <nav role="navigation" className="md:block hidden">
         <ul className="flex flex-col 2xl:gap-3.75 gap-1.5">
           {nav.map((item) => (
             <li

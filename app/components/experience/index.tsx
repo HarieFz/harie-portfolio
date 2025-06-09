@@ -15,7 +15,7 @@ export default function Experience() {
         <div className="flex flex-col lg:gap-3">
           {experienceData?.map((item, index, { length }) => (
             <div key={index}>
-              <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3 hover-gradient-border">
+              <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 max-lg:py-3">
                 <div className="lg:col-span-3 max-lg:mb-0.5">
                   <time className="xl:text-nowrap lg:text-base text-xs text-[#EBEDF0]/80">
                     {item.start_date} - {item.end_date}
