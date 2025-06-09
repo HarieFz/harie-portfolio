@@ -274,7 +274,7 @@ const projectsData: ProjectTypes[] = [
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/9-edu-world_j26fxr.png",
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749325789/10-edu-world_gxjbj4.png",
     ],
-    title: "Edu World - Learning Management System",
+    title: "Edu World",
     description: `
     <p class="mb-6">Edu World is a web-based Learning Management System (LMS) designed specifically for instructors to manage and deliver online courses efficiently. The platform provides a streamlined interface that empowers instructors to focus on teaching while easily organizing course content, monitoring student progress, and handling assignments.</p>
 
@@ -316,7 +316,7 @@ const projectsData: ProjectTypes[] = [
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329676/secondhand/Seller/17-secondhand-Info_produk-2_fuhpct.png",
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749329677/secondhand/Seller/18-secondhand-Info_produk-5_rbrkzi.png",
     ],
-    title: "Secondhand - E-commerce",
+    title: "Secondhand",
     description: `
     <p class="mb-6">SecondHand is an online e-commerce platform dedicated to buying and selling secondhand items across a variety of categories. Built to be accessible and flexible, the platform allows users to act as both buyers and sellers using a single account, making the trading process simple and community-driven.</p>
     <p class="mb-6">The platform facilitates direct negotiation between users and encourages independent transactions outside the platform, giving users full control over their buying and selling experience.</p>

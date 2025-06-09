@@ -32,9 +32,9 @@ export default function Projects() {
           <Link
             href={`/projects/${slugify(item.title)}`}
             key={index}
-            className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 p-3 max-lg:py-3 gradient-border"
+            className="xl:grid xl:grid-cols-12 xl:gap-8 lg:p-6 p-3 max-lg:py-3 gradient-border"
           >
-            <div className="hidden lg:block col-span-3 w-full aspect-[155/120] shrink-0 rounded-lg">
+            <div className="hidden xl:block xl:col-span-3 w-full aspect-[155/120] shrink-0 rounded-lg">
               <Image
                 src={item.thumbnail}
                 alt={`img-${index + 1}`}
@@ -45,10 +45,10 @@ export default function Projects() {
               />
             </div>
 
-            <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
+            <div className="xl:col-span-9 flex flex-col lg:gap-6 gap-3">
               <div>
-                <p className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</p>
-                <div className="lg:hidden block w-[116.5px] h-22.5 mb-3">
+                <p className="font-bold xl:text-2xl lg:text-base text-xs text-white lg:mb-3 mb-2">{item.title}</p>
+                <div className="xl:hidden block max-w-[116.5px] h-22.5 mb-3">
                   <Image
                     src={item.thumbnail}
                     alt="project"
