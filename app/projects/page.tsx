@@ -27,7 +27,7 @@ export default function Projects() {
 
       <div className="w-full h-[0.5px] lg:my-8 my-3 bg-[#EBEDF0]/40" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 gap-3">
         {projectsData.map((item, index) => (
           <Link
             href={`/projects/${slugify(item.title)}`}
