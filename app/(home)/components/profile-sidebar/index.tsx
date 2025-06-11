@@ -1,34 +1,42 @@
 "use client";
 
 import React, { useContext } from "react";
-import Github from "../../../public/icons/github.svg";
-import LinkedIn from "../../../public/icons/linkedin.svg";
-import Mail from "../../../public/icons/mail.svg";
-import Instagram from "../../../public/icons/instagram.svg";
-import Phone from "../../../public/icons/phone.svg";
-import Resume from "../../../public/icons/resume.svg";
+
+// Next modules
 import Image from "next/image";
-import HighlightContext from "@/app/contexts/highlight.context";
 import Link from "next/link";
+
+// Icons
+import Github from "../../../../public/icons/github.svg";
+import LinkedIn from "../../../../public/icons/linkedin.svg";
+import Mail from "../../../../public/icons/mail.svg";
+import Instagram from "../../../../public/icons/instagram.svg";
+import Phone from "../../../../public/icons/phone.svg";
+import Resume from "../../../../public/icons/resume.svg";
+
+// Context
+import HighlightContext from "../../contexts/highlight.context";
+
+// Tooltip modules
 import { useTooltip } from "@/hooks/useTooltip";
 import { Tooltip } from "@/components/Tooltip";
 
+// Utils
+import scrollToElement from "@/utils/scrollToElement";
+
+// Daftar bagian halaman yang dituju oleh navigasi sidebar
 const nav = ["about", "experience", "projects", "technical-skills", "certifications"];
 
 export default function ProfileSidebar() {
+  // Ambil highlight dari context untuk menandai bagian navigasi yang sedang aktif
   const { highlight } = useContext(HighlightContext);
+
+  // Inisialisasi tooltip dengan delay dan offset khusus
   const { tooltip, handleMouseEnter, handleMouseLeave, handleMouseMove } = useTooltip({
     showDelay: 500,
     hideDelay: 200,
     offset: { x: 10, y: 5 },
   });
-
-  const scrollToElement = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <>

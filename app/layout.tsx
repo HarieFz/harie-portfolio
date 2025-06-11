@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import RippleCursor from "@/components/RippleCursor";
-import HighlightProvider from "./contexts/highlight.provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -106,26 +105,38 @@ const professionalServiceSchema = {
   name: "Frontend Development Services",
   description:
     "Professional frontend development services specializing in React.js, Next.js, and modern web applications",
+  areaServed: {
+    "@type": "Country",
+    name: "Indonesia",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Frontend Development Packages",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "React.js Web Application Development",
+          description:
+            "Building modern web applications using React.js with focus on responsive design and user experience",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Next.js Front-End Development",
+          description: "Developing front-end with Next.js, including SSR and static site generation",
+        },
+      },
+    ],
+  },
   provider: {
     "@type": "Person",
     name: "Harie Fairuz Zaki",
     jobTitle: "Front-End Web Developer",
   },
-  areaServed: "Indonesia",
-  serviceType: "Web Development",
-  offers: [
-    {
-      "@type": "Offer",
-      name: "React.js Web Application Development",
-      description:
-        "Building modern web applications using React.js with focus on responsive design and user experience",
-    },
-    {
-      "@type": "Offer",
-      name: "Next.js Front-End Development",
-      description: "Developing front-end with Next.js, including SSR and static site generation",
-    },
-  ],
 };
 
 export default function RootLayout({
@@ -149,7 +160,7 @@ export default function RootLayout({
           }}
         />
         <RippleCursor />
-        <HighlightProvider>{children}</HighlightProvider>
+        {children}
       </body>
     </html>
   );

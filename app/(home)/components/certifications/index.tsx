@@ -1,22 +1,32 @@
-import Image from "next/image";
 import React from "react";
+
+// Next modules
+import Image from "next/image";
 import Link from "next/link";
+
+// Utils
 import { slugify } from "@/utils/slugify";
+
+// Data
 import { certificationsData } from "@/data/certifications";
 
 export default function Certifications() {
   return (
     <section id="certifications">
       <div className="lg:mb-8">
+        {/* Judul dan garis pemisah */}
         <div className="lg:hidden block w-fit">
           <h2 className="font-bold text-xs text-white mb-2">CERTIFICATIONS</h2>
           <div className="w-full h-0.5 bg-white rounded-4xl" />
         </div>
 
+        {/* Konten utama */}
         <div className="flex flex-col gap-3">
+          {/* Cards */}
           {certificationsData.map((item, index, { length }) => (
             <Link href={`/certifications/${slugify(item.title)}`} key={index}>
               <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6 hover-gradient-border max-lg:py-3">
+                {/* gambar utama ketika ukuran layar laptop/desktop */}
                 <div className="hidden lg:block lg:col-span-3 w-full lg:aspect-[155/120] lg:shrink-0">
                   <Image
                     src={item.thumbnail}
@@ -29,11 +39,13 @@ export default function Certifications() {
                   />
                 </div>
 
+                {/* Informasi sertifikat */}
                 <div className="lg:col-span-9 flex flex-col lg:gap-6 gap-3">
                   <div>
                     <h3 className="font-bold lg:text-2xl text-xs text-white lg:mb-3 mb-2">{item.title}</h3>
                     <p className="lg:text-xl text-xs text-[#EBEDF0]/80 lg:mb-3 mb-2">{item.issuing_organization}</p>
 
+                    {/* Gambar utama ketika ukuran layar mobile */}
                     <div className="block lg:hidden w-32.5 h-22.5 mb-3">
                       <Image
                         src={item.thumbnail}
@@ -51,6 +63,8 @@ export default function Certifications() {
                       className="lg:text-base text-2xs text-justify text-white line-clamp-4"
                     />
                   </div>
+
+                  {/* Tech stack */}
                   <div className="flex items-center gap-3">
                     {item.tech.map((tech, i) => (
                       <div key={i} className="card-tech">
@@ -61,6 +75,7 @@ export default function Certifications() {
                 </div>
               </div>
 
+              {/* garis pembatas antar card */}
               {length - 1 === index ? null : (
                 <div className="lg:grid lg:grid-cols-12 lg:gap-8 pt-3">
                   <div className="lg:col-span-3 lg:block hidden" />
@@ -72,6 +87,7 @@ export default function Certifications() {
         </div>
       </div>
 
+      {/* Garis pembatas */}
       <div className="lg:block hidden w-full h-[0.5px] bg-[#EBEDF0]/40" />
     </section>
   );

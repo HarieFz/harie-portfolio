@@ -1,6 +1,12 @@
 import React from "react";
-import Chain from "../../../public/icons/link.svg";
+
+// Next Modules
 import Link from "next/link";
+
+// Icons
+import Chain from "../../../../public/icons/link.svg";
+
+// Data
 import { experienceData } from "@/data/experience";
 
 export default function Experience() {
