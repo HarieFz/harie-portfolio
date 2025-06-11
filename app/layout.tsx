@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import RippleCursor from "@/components/RippleCursor";
+import Head from "next/head";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,62 +53,61 @@ export const metadata: Metadata = {
 
 const mainPersonSchema = {
   "@context": "https://schema.org",
-  "@type": ["Person", "WebSite"],
-
-  // Person Information
-  name: "Harie Fairuz Zaki",
-  jobTitle: "Front-End Developer",
-  description:
-    "Hi! I'm Harie Fairuz Zaki, a front-end web developer passionate about crafting intuitive, responsive, and visually engaging websites, with a focus on building web applications using React.js and Next.js. I'm currently open to job opportunities—let's connect!",
-
-  // Contact & Social
-  url: "https://harie-portfolio.vercel.app",
-  email: "mailto:hfairuzzaki@gmail.com",
-  sameAs: ["https://github.com/HarieFz", "https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/"],
-
-  // Skills & Expertise
-  knowsAbout: [
-    "React.js",
-    "Next.js",
-    "JavaScript",
-    "TypeScript",
-    "TailwindCSS",
-    "Material UI",
-    "Redux",
-    "REST API",
-    "Frontend Development",
-    "Web Development",
-  ],
-
-  // Work Experience
-  worksFor: {
-    "@type": "Organization",
-    name: "PT. Sinergi Nusantara Integrasi",
-  },
-
-  // Website Schema
-  mainEntity: {
-    "@type": "WebSite",
-    name: "Harie Fairuz Zaki - Front-End Web Developer",
-    url: "https://harie-portfolio.vercel.app",
-    description:
-      "Professional portfolio showcasing frontend development projects and expertise in React.js, Next.js, and modern web technologies",
-    author: {
+  "@graph": [
+    {
       "@type": "Person",
       name: "Harie Fairuz Zaki",
+      jobTitle: "Front-End Developer",
+      description:
+        "Hi! I'm Harie Fairuz Zaki, a front-end web developer passionate about crafting intuitive, responsive, and visually engaging websites, with a focus on building web applications using React.js and Next.js. I'm currently open to job opportunities—let's connect!",
+      url: "https://harie-portfolio.vercel.app",
+      email: "mailto:hfairuzzaki@gmail.com",
+      sameAs: ["https://github.com/HarieFz", "https://www.linkedin.com/in/harie-fairuz-zaki-691b05136/"],
+      knowsAbout: [
+        "React.js",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "TailwindCSS",
+        "Material UI",
+        "Redux",
+        "REST API",
+        "Frontend Development",
+        "Web Development",
+      ],
+      worksFor: {
+        "@type": "Organization",
+        name: "PT. Sinergi Nusantara Integrasi",
+      },
     },
-  },
+    {
+      "@type": "WebSite",
+      name: "Harie Fairuz Zaki - Front-End Web Developer",
+      url: "https://harie-portfolio.vercel.app",
+      description:
+        "Professional portfolio showcasing frontend development projects and expertise in React.js, Next.js, and modern web technologies",
+      author: {
+        "@type": "Person",
+        name: "Harie Fairuz Zaki",
+      },
+    },
+  ],
 };
 
 const professionalServiceSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Frontend Development Services",
+  "@type": "Service",
+  name: "Front-End Web Development Services",
   description:
     "Professional frontend development services specializing in React.js, Next.js, and modern web applications",
   areaServed: {
     "@type": "Country",
     name: "Indonesia",
+  },
+  provider: {
+    "@type": "Person",
+    name: "Harie Fairuz Zaki",
+    jobTitle: "Front-End Web Developer",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -132,11 +132,6 @@ const professionalServiceSchema = {
       },
     ],
   },
-  provider: {
-    "@type": "Person",
-    name: "Harie Fairuz Zaki",
-    jobTitle: "Front-End Web Developer",
-  },
 };
 
 export default function RootLayout({
@@ -147,6 +142,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased relative bg-dark-navy max-lg:py-8 max-lg:px-6`}>
+        <Head>
+          <meta name="google-site-verification" content="rPWmfH9PNWnIpw7KD-pAMkRhY02m-znMP9MZzrld6iU" />
+        </Head>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
