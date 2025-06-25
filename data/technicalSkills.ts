@@ -15,6 +15,7 @@ const technicalSkillsData: TechnicalSkillsTypes[] = [
       "Next.js",
       "Tailwind",
       "Material UI",
+      "ShadCn/UI",
       "React Router",
       "Redux / Redux Toolkit",
       "React Hook Form",

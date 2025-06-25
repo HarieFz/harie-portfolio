@@ -9,6 +9,31 @@ interface ProjectTypes {
 
 const projectsData: ProjectTypes[] = [
   {
+    thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1750872625/3d-carousel_eh3esh.png`,
+    images: ["https://res.cloudinary.com/harie/image/upload/q_auto/v1750872625/3d-carousel_eh3esh.png"],
+    title: "3D Carousel Interactive Nike Shoes",
+    description: `
+    <p class="mb-6">3D Carousel Interactive Nike Shoes is a visually engaging product showcase website designed to highlight various Nike shoe models in a dynamic and modern way. The project features high-resolution shoe images combined with a circular carousel and smooth transition effects, creating an intuitive and immersive browsing experience that blends aesthetics with usability.</p>
+
+    <p class="font-bold mb-1">Key highlights of this project include:</p>
+
+    <ul class="list-inside list-disc mb-3">
+      <li>Visually appealing circular carousel to explore Nike's shoe collection interactively.</li>
+      <li>Minimalist UI focused on product visibility, with clear display of price, color variants, and size selection.</li>
+      <li>Smooth transition animations that give a semi-3D feel and enhance the overall experience.</li>
+      <li>Call-to-action features like “Buy” button, color selectors, and size options to support user engagement.</li>
+      <li>Strong visual branding using a dark theme, bold typography, and vibrant accent elements for a sporty and premium look.</li>
+    </ul>
+
+    <p>⚠️ This website is currently optimized for desktop viewing only. Full mobile support is still under development.</p>
+    `,
+    demo: {
+      name: "3D Carousel Interactive Nike Shoes",
+      link: "https://3d-carousel-interactive-nike-shoes.vercel.app/",
+    },
+    tech: ["Next.js", "TailwindCSS", "Framer Motion"],
+  },
+  {
     thumbnail: `https://res.cloudinary.com/harie/image/upload/q_auto/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png`,
     images: [
       "https://res.cloudinary.com/harie/image/upload/q_auto/v1749019682/personal-portfolio-by-jcrea-design_wkjmim.png",
