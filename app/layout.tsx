@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, TikTok_Sans, Jersey_10 } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import SmoothScrollProvider from "@/components/custom-ui/SmoothScrollProvider";
+import ScrollIndicator from "@/components/custom-ui/ScrollIndicator";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const tiktokSans = TikTok_Sans({
+  variable: "--font-tiktok-sans",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const jersey10 = Jersey_10({
+  variable: "--font-jersey-10",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +34,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", geistMono.variable, jersey10.variable, tiktokSans.variable)}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-black">
+        <SmoothScrollProvider />
+        <ScrollIndicator />
+        {children}
+      </body>
     </html>
   );
 }
