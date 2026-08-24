@@ -20,6 +20,7 @@ const SKILL_GROUPS = [
       "ShadCN UI",
       "Recharts",
       "Framer Motion",
+      "GSAP",
       "Pinia",
       "Zustand",
       "Redux",
@@ -52,22 +53,22 @@ export default function Skills() {
         <div className="mb-12 lg:mb-24 flex flex-col items-center justify-center text-center">
           <h2 className="w-full md:max-w-5xl text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
             <span>A technical stack built for</span> <br />{" "}
-            <span className="text-white/50 text-nowrap text-3xl">thoughtful interfaces.</span>
+            <span className="text-white/50 text-nowrap text-3xl md:text-6xl">thoughtful interfaces.</span>
           </h2>
 
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/70">
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/80">
             From frontend architecture and state management to APIs, tooling, and collaboration.
           </p>
         </div>
 
         {/* Skills */}
-        <div className="border-t border-white/20">
+        <div className="border-t border-foreground/20">
           {SKILL_GROUPS.map((group) => (
             <div
               key={group.number}
               className="
             grid gap-8
-            border-b border-white/20
+            border-b border-foreground/20
             py-12
             md:grid-cols-12
             md:gap-10
@@ -75,14 +76,14 @@ export default function Skills() {
             >
               {/* Number */}
               <div className="md:col-span-1">
-                <span className="font-mono text-xs text-white/70">{group.number}</span>
+                <span className="font-mono text-xs text-white/80">{group.number}</span>
               </div>
 
               {/* Category */}
               <div className="md:col-span-4">
                 <h3 className="text-lg font-medium tracking-tight">{group.title}</h3>
 
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{group.description}</p>
+                <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/80">{group.description}</p>
               </div>
 
               {/* Skills */}
@@ -95,7 +96,7 @@ export default function Skills() {
                     group
                     relative
                     text-sm
-                    text-white/70
+                    text-white/80
                     transition-colors
                     duration-300
                     hover:text-white

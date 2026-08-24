@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist_Mono, TikTok_Sans, Jersey_10 } from "next/font/google";
+import { Geist_Mono, Jersey_10, Mochiy_Pop_One } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import SmoothScrollProvider from "@/components/custom-ui/SmoothScrollProvider";
-import ScrollIndicator from "@/components/custom-ui/ScrollIndicator";
-
-const tiktokSans = TikTok_Sans({
-  variable: "--font-tiktok-sans",
-  subsets: ["latin"],
-});
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import ScrollIndicator from "@/components/ScrollIndicator";
+import { ThemeProvider } from "@/hooks/ThemeProvider";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -17,6 +13,12 @@ const geistMono = Geist_Mono({
 
 const jersey10 = Jersey_10({
   variable: "--font-jersey-10",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const mochiyPopOne = Mochiy_Pop_One({
+  variable: "--font-mochiy-pop-one",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -34,13 +36,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistMono.variable, jersey10.variable, tiktokSans.variable)}
+      className={cn("h-full", "antialiased", geistMono.variable, jersey10.variable, mochiyPopOne.variable)}
       suppressHydrationWarning
     >
-      <body className="bg-black">
+      <body className="bg-white">
         <SmoothScrollProvider />
         <ScrollIndicator />
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

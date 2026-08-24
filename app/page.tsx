@@ -1,12 +1,12 @@
-import Experience from "@/components/custom-ui/Experience";
-import Work from "@/components/custom-ui/Work";
-import Hero from "@/components/custom-ui/Hero";
-import AboutMe from "@/components/custom-ui/AboutMe";
-import Skills from "@/components/custom-ui/Skills";
-import Footer from "@/components/custom-ui/Footer";
-import Header from "@/components/custom-ui/Header";
-import { Background } from "@/components/custom-ui/Background";
-
+import Experience from "@/components/Experience";
+import Work from "@/components/Work";
+import Hero from "@/components/Hero";
+import AboutMe from "@/components/AboutMe";
+import Skills from "@/components/Skills";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { Background } from "@/components/Background";
+import FallingObjects from "@/components/FallingObjects";
 export default function Home() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function Home() {
 
       <main>
         <Background>
+          <FallingObjects />
           <Hero />
 
           <AboutMe />

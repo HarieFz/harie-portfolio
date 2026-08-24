@@ -4,7 +4,14 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Axel from "@/public/images/image.png";
+import Work1 from "@/public/images/work-1.webp";
+import Work2 from "@/public/images/work-2.webp";
+import Work3 from "@/public/images/work-3.webp";
+import Work4 from "@/public/images/work-4.webp";
+import Work5 from "@/public/images/work-5.webp";
+import Work6 from "@/public/images/work-6.webp";
+import Work7 from "@/public/images/work-7.webp";
+import Work8 from "@/public/images/work-8.webp";
 import Image, { StaticImageData } from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -15,15 +22,17 @@ interface BoxItem {
   title: string;
 }
 
-const BOX_WIDTH = 380;
 const BOX_GAP = 32;
 
 const BOXES: BoxItem[] = [
-  { number: "01", image: Axel, title: "Riset & Discovery" },
-  { number: "02", image: Axel, title: "Strategi & Perencanaan" },
-  { number: "03", image: Axel, title: "Desain & Prototipe" },
-  { number: "04", image: Axel, title: "Pengembangan Produk" },
-  { number: "05", image: Axel, title: "Peluncuran & Evaluasi" },
+  { number: "06", image: Work6, title: "Gold to Mecca" },
+  { number: "07", image: Work7, title: "Gold to Mecca with BPKH" },
+  { number: "05", image: Work5, title: "Gold to Mecca Admin" },
+  { number: "01", image: Work1, title: "Axel Inteligence" },
+  { number: "02", image: Work2, title: "Tunas Unggul" },
+  { number: "08", image: Work8, title: "Naara Skincare" },
+  { number: "03", image: Work3, title: "Mitra Group Landing Page" },
+  { number: "04", image: Work4, title: "Mitra Group Career" },
 ];
 
 export default function Work() {
@@ -39,7 +48,8 @@ export default function Work() {
       const getViewportWidth = () => document.documentElement.clientWidth;
 
       const applyTrackPadding = () => {
-        const sidePadding = Math.max((getViewportWidth() - BOX_WIDTH) / 2, 0);
+        const boxSize = window.innerHeight * 0.6;
+        const sidePadding = Math.max((getViewportWidth() - boxSize) / 2, 0);
         gsap.set(track, {
           paddingLeft: sidePadding,
           paddingRight: sidePadding,
@@ -90,26 +100,19 @@ export default function Work() {
           {BOXES.map((box) => (
             <div
               key={box.number}
-              className="relative flex h-[60vh] shrink-0 flex-col justify-between overflow-hidden rounded-2xl p-8"
-              style={{ width: BOX_WIDTH }}
+              className="relative flex aspect-square h-[60vh] shrink-0 flex-col justify-between overflow-hidden rounded-2xl p-8"
             >
-              <Image
-                src={box.image}
-                alt={box.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 80vw, 400px"
-              />
+              <Image src={box.image} alt={box.title} fill className="object-cover" />
 
-              <div className="absolute inset-0 bg-black/10" />
+              <div className="absolute inset-0 bg-black/5" />
 
               <div className="relative z-10">
-                <span className="text-sm font-mono font-medium text-neutral-300">{box.number}</span>
+                <span className="text-sm font-mono font-medium text-white">{box.number}</span>
               </div>
 
-              <h3 className="relative z-10 w-fit text-2xl font-semibold leading-snug text-white before:absolute before:inset-0 before:-z-10 before:bg-[radial-gradient(ellipse_60%_70%_at_center,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.45)_35%,rgba(0,00,00,0.12)_65%,transparent_100%)]">
-                {box.title}
-              </h3>
+              <div className="relative z-10 w-fit h-fit px-3 py-1 bg-linear-0 from-black/0 via-black/30 to-black/0">
+                <h3 className="relative z-10 w-fit text-xl font-semibold leading-snug text-white">{box.title}</h3>
+              </div>
             </div>
           ))}
         </div>
@@ -120,17 +123,17 @@ export default function Work() {
         {BOXES.map((box) => (
           <div
             key={box.number}
-            className="relative w-full flex h-[50vh] flex-col justify-between overflow-hidden rounded-2xl p-8"
+            className="relative flex aspect-square h-[40vh] flex-col justify-between overflow-hidden rounded-2xl p-6"
           >
-            <Image src={box.image} alt={box.title} fill className="object-cover" sizes="100vw" />
+            <Image src={box.image} alt={box.title} fill className="object-cover" />
 
-            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute inset-0 bg-black/5" />
 
             <div className="relative z-10">
-              <span className="text-sm font-mono font-medium text-neutral-300">{box.number}</span>
+              <span className="text-sm font-mono font-medium text-white">{box.number}</span>
             </div>
 
-            <h3 className="relative z-10 w-fit text-2xl font-semibold leading-snug text-white before:absolute before:inset-0 before:-z-10 before:bg-[radial-gradient(ellipse_60%_70%_at_center,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.45)_35%,rgba(0,00,00,0.12)_65%,transparent_100%)]">
+            <h3 className="relative z-10 w-fit text-2xl font-semibold leading-snug text-background before:absolute before:inset-0 before:-z-10 before:bg-[radial-gradient(ellipse_60%_70%_at_center,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.45)_35%,rgba(0,00,00,0.12)_65%,transparent_100%)]">
               {box.title}
             </h3>
           </div>

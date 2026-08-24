@@ -1,75 +1,15 @@
-"use client";
-
 import Image from "next/image";
 import IconArrowTopRight from "@/public/icons/arrow-top-right.svg";
 import IconInstagram from "@/public/icons/instagram.svg";
 import IconGithub from "@/public/icons/github.svg";
 import PhotoProfile from "@/public/images/photo-profile.jpg";
 import Signature from "@/public/images/signature-harie.svg";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function AboutMe() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const svgRef = useRef<SVGSVGElement>(null);
-  const maskRevealRef = useRef<SVGRectElement>(null);
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-      const reveal = maskRevealRef.current;
-
-      if (!section || !reveal) return;
-
-      //
-      gsap.set(reveal, {
-        attr: {
-          width: 0,
-        },
-      });
-
-      const tl = gsap.timeline({
-        paused: true,
-      });
-
-      tl.to(reveal, {
-        attr: {
-          width: 1672,
-        },
-        duration: 2.5,
-        ease: "power2.inOut",
-      });
-
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top 80%",
-
-        onEnter: () => {
-          tl.restart();
-        },
-
-        onEnterBack: () => {
-          tl.restart();
-        },
-      });
-    },
-    {
-      scope: svgRef,
-    },
-  );
-
   return (
-    <section
-      ref={sectionRef}
-      className="relative z-30 max-w-7xl mx-auto w-full min-h-dvh flex items-center justify-center mb-24 lg:mb-0"
-    >
+    <section className="relative z-30 max-w-7xl mx-auto w-full min-h-dvh flex items-center justify-center mb-24 lg:mb-0">
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:items-start lg:gap-30">
         <div className="relative w-full max-w-88">
-          {/* Foto yang di-mask */}
           <div className="masking-photo relative aspect-square w-full">
             <Image
               src={Signature}
@@ -77,7 +17,7 @@ export default function AboutMe() {
               width={0}
               height={0}
               sizes="100vw"
-              className="absolute left-0 top-0 w-40"
+              className="absolute left-1 top-1 w-40"
             />
 
             <Image
@@ -100,7 +40,7 @@ export default function AboutMe() {
               <Image src={IconGithub} alt="Github" width={0} height={0} sizes="100vw" className="size-5" />
             </div>
 
-            <div className="flex size-8 items-center justify-center rounded-full bg-black">
+            <div className="flex size-8 items-center justify-center rounded-full bg-foreground">
               <Image
                 src={IconArrowTopRight}
                 alt="Arrow top right"

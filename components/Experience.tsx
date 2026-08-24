@@ -19,11 +19,11 @@ export default function Experience() {
             <div key={item.id} className="flex min-h-screen flex-col justify-center gap-4">
               <div className="space-y-1 ">
                 <h2 className="text-2xl font-medium md:text-3xl">{item.title}</h2>
-                <p className="text-lg text-neutral-200">{item.subtitle}</p>
-                <p className="text-base text-neutral-200">{item.date}</p>
+                <p className="text-lg text-white">{item.subtitle}</p>
+                <p className="text-base text-white">{item.date}</p>
               </div>
 
-              <p className="whitespace-pre-line text-base leading-relaxed text-neutral-100 md:text-lg">{item.body}</p>
+              <p className="whitespace-pre-line text-base leading-relaxed text-white md:text-lg">{item.body}</p>
             </div>
           ))}
         </div>
@@ -40,11 +40,11 @@ export default function Experience() {
             <div key={item.id} className="flex flex-col justify-center gap-4">
               <div className="space-y-1 ">
                 <h2 className="text-2xl font-medium md:text-3xl">{item.title}</h2>
-                <p className="text-lg text-neutral-200">{item.subtitle}</p>
-                <p className="text-base text-neutral-200">{item.date}</p>
+                <p className="text-lg text-white">{item.subtitle}</p>
+                <p className="text-base text-white">{item.date}</p>
               </div>
 
-              <p className="whitespace-pre-line text-base leading-relaxed text-neutral-100 md:text-lg">{item.body}</p>
+              <p className="whitespace-pre-line text-base leading-relaxed text-white md:text-lg">{item.body}</p>
             </div>
           ))}
         </div>
