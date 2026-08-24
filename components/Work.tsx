@@ -25,14 +25,14 @@ interface BoxItem {
 const BOX_GAP = 32;
 
 const BOXES: BoxItem[] = [
-  { number: "06", image: Work6, title: "Gold to Mecca" },
-  { number: "07", image: Work7, title: "Gold to Mecca with BPKH" },
-  { number: "05", image: Work5, title: "Gold to Mecca Admin" },
-  { number: "01", image: Work1, title: "Axel Inteligence" },
-  { number: "02", image: Work2, title: "Tunas Unggul" },
-  { number: "08", image: Work8, title: "Naara Skincare" },
-  { number: "03", image: Work3, title: "Mitra Group Landing Page" },
-  { number: "04", image: Work4, title: "Mitra Group Career" },
+  { number: "01", image: Work6, title: "Gold to Mecca" },
+  { number: "02", image: Work7, title: "Gold to Mecca with BPKH" },
+  { number: "03", image: Work5, title: "Gold to Mecca Admin" },
+  { number: "04", image: Work1, title: "Axel Inteligence" },
+  { number: "05", image: Work2, title: "Tunas Unggul" },
+  { number: "06", image: Work8, title: "Naara Skincare" },
+  { number: "07", image: Work3, title: "Mitra Group Landing Page" },
+  { number: "08", image: Work4, title: "Mitra Group Career" },
 ];
 
 export default function Work() {

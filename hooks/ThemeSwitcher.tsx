@@ -19,9 +19,9 @@ export function ThemeSwitcher({ children }: Readonly<{ children: React.ReactNode
       type="button"
       onClick={handleChange}
       aria-label={`Theme: ${theme}. Click to change theme.`}
-      className="flex items-center justify-center gap-1 border-2 border-transparent border-dashed hover:border-white px-3 py-1 transition-colors"
+      className="flex items-center justify-center gap-1 border-[2px] border-transparent border-dashed hover:border-white px-3 py-1.5 transition-colors"
     >
-      <span className="text-2xl uppercase text-white">{children}</span>
+      <span className="font-light text-sm uppercase text-white">{children}</span>
     </button>
   );
 }

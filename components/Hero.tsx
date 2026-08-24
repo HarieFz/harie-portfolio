@@ -15,6 +15,65 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const heroImageRef = useRef<HTMLDivElement>(null);
   const heroImageMobileRef = useRef<HTMLDivElement>(null);
+  const sakuraLeftRef = useRef<HTMLDivElement>(null);
+  const sakuraRightRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "expo.out",
+        },
+      });
+
+      tl.fromTo(
+        sakuraLeftRef.current,
+        {
+          x: "-30%",
+          y: "-5%",
+          opacity: 0,
+          rotate: -8,
+        },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          rotate: 0,
+          duration: 1.4,
+        },
+        0.2,
+      );
+
+      tl.fromTo(
+        sakuraRightRef.current,
+        {
+          x: "30%",
+          y: "-5%",
+          opacity: 0,
+          rotate: 8,
+        },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          rotate: 0,
+          duration: 1.4,
+        },
+        0.2,
+      );
+
+      tl.to(
+        [heroImageRef.current, heroImageMobileRef.current],
+        {
+          scale: 1,
+          duration: 1.5,
+          ease: "expo.out",
+        },
+        0,
+      );
+    },
+    { scope: sectionRef },
+  );
 
   useGSAP(
     () => {
@@ -54,7 +113,7 @@ export default function Hero() {
       },
       {
         ref: descriptionRef,
-        text: "I'm Harie, a Frontend Engineer who enjoys solving problems beyond the interface. From crafting polished user experiences to designing scalable frontend architectures, I build products that are made to last—not just to launch.",
+        text: "I'm Harie, a Frontend Engineer who solves problems beyond the interface—from polished experiences to scalable architectures. I build products made to last.",
       },
       {
         ref: descriptionMobileRef,
@@ -97,7 +156,7 @@ export default function Hero() {
                 </p>
               </div>
               <div>
-                <p ref={descriptionRef} className="font-bold text-lg" />
+                <p ref={descriptionRef} className="font-inter font-semibold text-base max-w-90" />
               </div>
             </div>
 
@@ -129,7 +188,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:block pointer-events-none absolute z-20 top-0 left-0">
+          <div ref={sakuraLeftRef} className="hidden lg:block pointer-events-none absolute z-20 top-0 left-0 opacity-0">
             <Image
               src={SakuraFlowerLeft}
               alt="Background Hero"
@@ -141,7 +200,10 @@ export default function Hero() {
             />
           </div>
 
-          <div className="hidden lg:block pointer-events-none absolute z-20 top-0 right-0">
+          <div
+            ref={sakuraRightRef}
+            className="hidden lg:block pointer-events-none absolute z-20 top-0 right-0 opacity-0"
+          >
             <Image
               src={SakuraFlowerRight}
               alt="Background Hero"
@@ -168,7 +230,7 @@ export default function Hero() {
             </div>
 
             <div>
-              <p ref={descriptionMobileRef} className="text-xl" />
+              <p ref={descriptionMobileRef} className="font-semibold text-xl" />
             </div>
           </div>
 
