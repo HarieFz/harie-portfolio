@@ -8,6 +8,7 @@ interface ScrambleItem {
 }
 
 interface UseScrambleTextOptions {
+  start: boolean;
   items: ScrambleItem[];
   totalDuration?: number;
   characters?: string;
@@ -16,6 +17,7 @@ interface UseScrambleTextOptions {
 }
 
 export const useScrambleText = ({
+  start,
   items,
   totalDuration = 1.5,
   characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
@@ -23,6 +25,8 @@ export const useScrambleText = ({
   finalClassName = "text-white",
 }: UseScrambleTextOptions) => {
   useLayoutEffect(() => {
+    if (!start) return;
+
     const timelines: gsap.core.Timeline[] = [];
 
     items.forEach(({ text, ref, delay = 0 }) => {
@@ -94,7 +98,7 @@ export const useScrambleText = ({
     return () => {
       timelines.forEach((timeline) => timeline.kill());
     };
-  }, [items, totalDuration, characters, randomClassName, finalClassName]);
+  }, [start, items, totalDuration, characters, randomClassName, finalClassName]);
 };
 
 interface RenderTextParams {

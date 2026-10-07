@@ -111,7 +111,7 @@ export default function Work() {
               </div>
 
               <div className="relative z-10 w-fit h-fit px-3 py-1 bg-linear-0 from-black/0 via-black/30 to-black/0">
-                <h3 className="relative z-10 w-fit text-xl font-semibold leading-snug text-white">{box.title}</h3>
+                <h3 className="w-fit text-xl font-semibold leading-snug text-white">{box.title}</h3>
               </div>
             </div>
           ))}
@@ -133,9 +133,9 @@ export default function Work() {
               <span className="text-sm font-mono font-medium text-white">{box.number}</span>
             </div>
 
-            <h3 className="relative z-10 w-fit text-2xl font-semibold leading-snug text-background before:absolute before:inset-0 before:-z-10 before:bg-[radial-gradient(ellipse_60%_70%_at_center,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.45)_35%,rgba(0,00,00,0.12)_65%,transparent_100%)]">
-              {box.title}
-            </h3>
+            <div className="relative z-10 w-fit h-fit px-3 py-1 bg-linear-0 from-black/0 via-black/30 to-black/0">
+              <h3 className="w-fit text-xl font-semibold leading-snug text-white">{box.title}</h3>
+            </div>
           </div>
         ))}
       </div>
