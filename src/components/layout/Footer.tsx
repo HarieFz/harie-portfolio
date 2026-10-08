@@ -142,7 +142,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-wrap items-center justify-between gap-6 border-t border-white/20 pt-6">
           <p className="font-manrope text-[10px] uppercase tracking-[0.14em] text-white/70">
-            © {new Date().getFullYear()} Harie. All Rights Reserved.
+            © 2026 Harie. All Rights Reserved.
           </p>
 
           <Link
