@@ -1,3 +1,5 @@
+type ProjectDisplay = "desktop" | "mobile";
+
 export interface Project {
   id: number;
   slug: string;
@@ -6,6 +8,7 @@ export interface Project {
   description: string;
   image: string;
   year: string;
+  display?: ProjectDisplay;
 }
 
 export const projects: Project[] = [
@@ -18,6 +21,7 @@ export const projects: Project[] = [
       "A digital wedding invitation platform combining thoughtful design, personalized experiences, and an end-to-end invitation management workflow.",
     image: "/images/projects/undangan-digital.webp",
     year: "2026",
+    display: "desktop",
   },
   {
     id: 2,
@@ -28,6 +32,7 @@ export const projects: Project[] = [
       "A gold-based Umrah savings platform featuring financial planning, gold trading, and travel package booking.",
     image: "/images/projects/gtm-home.webp",
     year: "2025",
+    display: "mobile",
   },
   {
     id: 3,
@@ -38,6 +43,7 @@ export const projects: Project[] = [
       "A Hajj-focused gold savings experience supporting travel planning, asset management, and gold transactions.",
     image: "/images/projects/gtm_haji-home.webp",
     year: "2025",
+    display: "mobile",
   },
   {
     id: 4,
@@ -48,6 +54,7 @@ export const projects: Project[] = [
       "A centralized platform for managing travel agencies, packages, financial transactions, and operational workflows.",
     image: "/images/projects/gtm_admin-paket_gtm.webp",
     year: "2025",
+    display: "desktop",
   },
   {
     id: 5,
@@ -58,6 +65,7 @@ export const projects: Project[] = [
       "An API integration hub designed to simplify discovery, documentation, approval workflows, and in-browser testing.",
     image: "/images/projects/axel-landing_crop.webp",
     year: "2025",
+    display: "desktop",
   },
   {
     id: 6,
@@ -68,5 +76,6 @@ export const projects: Project[] = [
       "A comprehensive school management platform connecting academic operations, administration, finance, and reporting.",
     image: "/images/projects/tunas_unggul-home.webp",
     year: "2024",
+    display: "desktop",
   },
 ];

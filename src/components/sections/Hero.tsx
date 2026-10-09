@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
+import AnchorLink from "../ui/AnchorLink";
 
 export default function Hero() {
   return (
@@ -41,6 +41,7 @@ export default function Hero() {
         <div className="flex justify-center">
           <h1
             id="hero-title"
+            data-hero-title
             className="font-display text-center text-[clamp(5rem,16vw,15rem)] leading-[0.8] tracking-[-0.075em]"
           >
             HARIE.
@@ -51,16 +52,20 @@ export default function Hero() {
 
         {/* Bottom Bar */}
         <div className="flex items-end justify-between gap-6">
-          <Link href="#projects" className="font-manrope group inline-flex min-h-11 items-center gap-4 text-sm">
+          <AnchorLink
+            href="#projects"
+            className="font-manrope group invisible inline-flex min-h-11 items-center gap-4 text-sm"
+            data-hero-reveal
+          >
             <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#F6F2E9] text-[#222819] transition-transform duration-300 group-hover:rotate-45 motion-reduce:transition-none">
               <ArrowUpRight size={20} aria-hidden="true" />
             </span>
 
             <span>Explore Projects</span>
-          </Link>
+          </AnchorLink>
 
           {/* Scroll Indicator */}
-          <div aria-hidden="true" className="hidden items-center gap-4 pb-3 lg:flex">
+          <div aria-hidden="true" className="invisible hidden items-center gap-4 pb-3 lg:flex" data-hero-reveal>
             <span className="font-manrope text-[10px] uppercase tracking-[0.16em] text-white/80">
               Scroll to Explore
             </span>
