@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import AnchorLink from "../ui/AnchorLink";
 
 const navigation = [
   { label: "About", href: "#about" },
@@ -35,13 +36,13 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-10 md:flex">
           {navigation.map((item) => (
-            <Link
+            <AnchorLink
               key={item.href}
               href={item.href}
               className="font-body text-xs font-medium text-cream/80 transition-colors hover:text-cream"
             >
               {item.label}
-            </Link>
+            </AnchorLink>
           ))}
         </div>
 
@@ -99,7 +100,7 @@ export default function Navbar() {
           <div className="rounded-xl border border-cream/15 bg-olive-dark p-5 shadow-xl">
             <div className="flex flex-col gap-1">
               {navigation.map((item, index) => (
-                <Link
+                <AnchorLink
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
@@ -111,7 +112,7 @@ export default function Navbar() {
                   }}
                 >
                   {item.label}
-                </Link>
+                </AnchorLink>
               ))}
 
               {/* Mobile CTA */}

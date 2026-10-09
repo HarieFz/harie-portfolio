@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowUpLeft } from "lucide-react";
+import TransitionLink from "../ui/TransitionLink";
 
 export default function CaseStudyNavbar() {
   return (
@@ -8,15 +8,15 @@ export default function CaseStudyNavbar() {
         aria-label="Case study navigation"
         className="mx-auto flex h-20 w-full max-w-350 items-center justify-between px-6 md:px-10 lg:px-14"
       >
-        <Link
+        <TransitionLink
           href="/"
           aria-label="Harie — Home"
           className="font-display text-3xl font-semibold tracking-[-0.06em] text-olive-dark"
         >
           Harie<span className="text-[#737B58]">.</span>
-        </Link>
+        </TransitionLink>
 
-        <Link
+        <TransitionLink
           href="/#projects"
           className="group inline-flex items-center gap-3 font-body text-xs font-medium text-olive-dark transition-colors hover:text-[#737B58]"
         >
@@ -28,7 +28,7 @@ export default function CaseStudyNavbar() {
           />
 
           <span>Back to Projects</span>
-        </Link>
+        </TransitionLink>
       </nav>
     </header>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 
+import PageTransition from "@/components/ui/PageTransition";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -27,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${manrope.variable} antialiased`}>{children}</body>
+      <body className={`${cormorant.variable} ${manrope.variable} antialiased`}>
+        <PageTransition>{children}</PageTransition>
+      </body>
     </html>
   );
 }

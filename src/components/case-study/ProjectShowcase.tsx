@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 interface ShowcaseItem {
   number: string;
   title: string;
@@ -48,8 +50,8 @@ function ShowcaseVisual({
           }`}
         >
           {/* Smartphone Frame */}
-          <div className="overflow-hidden rounded-[2.5rem] border-[7px] border-[#252820] bg-[#252820] shadow-[0_25px_65px_rgba(0,0,0,0.18)] sm:rounded-[3rem] sm:border-[8px]">
-            <div className="relative aspect-9/19 overflow-hidden rounded-[2rem] bg-white sm:rounded-[2.4rem]">
+          <div className="overflow-hidden rounded-[2.5rem] border-[7px] border-charcoal bg-charcoal shadow-[0_25px_65px_rgba(0,0,0,0.18)] sm:rounded-[3rem] sm:border-8">
+            <div className="relative aspect-9/19 overflow-hidden rounded-4xl bg-white sm:rounded-[2.4rem]">
               <Image
                 src={item.image}
                 alt={item.imageAlt}
@@ -73,7 +75,7 @@ function ShowcaseVisual({
       )}
 
       {/* Decorative Label */}
-      <span className="pointer-events-none absolute bottom-5 right-5 font-body text-[10px] uppercase tracking-[0.15em] text-[#252820]/50 sm:bottom-7 sm:right-7">
+      <span className="pointer-events-none absolute bottom-5 right-5 font-body text-[10px] uppercase tracking-[0.15em] text-charcoal/50 sm:bottom-7 sm:right-7">
         {item.number} / {display === "mobile" ? "Mobile View" : "Interface"}
       </span>
     </div>
@@ -95,43 +97,65 @@ export default function ProjectShowcase({
     <section id="showcase" className="bg-[#F6F2E9] px-6 py-20 sm:px-10 lg:px-14 lg:py-28">
       <div className="mx-auto max-w-350">
         {/* Section Header */}
-        <div className="mb-14 flex items-center justify-between border-b border-black/15 pb-5 lg:mb-20">
-          <p className="font-body text-[10px] uppercase tracking-[0.2em] text-[#596044]">04 / Visual Showcase</p>
+        <ScrollReveal y={16} duration={0.7}>
+          <div className="mb-14 flex items-center justify-between border-b border-black/15 pb-5 lg:mb-20">
+            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-olive">04 / Visual Showcase</p>
 
-          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-black/45">Selected Screens</span>
-        </div>
+            <span className="font-body text-[10px] uppercase tracking-[0.2em] text-black/45">Selected Screens</span>
+          </div>
+        </ScrollReveal>
 
         {/* Heading */}
         <div className="mb-14 max-w-3xl lg:mb-20">
-          <h2 className="font-display text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.95] tracking-[-0.05em] text-[#252820]">
-            {heading} <span className="italic text-[#596044]">{highlight}</span>
-          </h2>
+          <ScrollReveal y={48} duration={1.1} delay={0.1}>
+            <h2 className="font-display text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.95] tracking-tighter text-charcoal">
+              {heading} <span className="italic text-olive">{highlight}</span>
+            </h2>
+          </ScrollReveal>
 
-          <p className="font-body mt-7 max-w-xl text-sm leading-7 text-black/60">{description}</p>
+          <ScrollReveal y={24} duration={0.9} delay={0.2}>
+            <p className="font-body mt-7 max-w-xl text-sm leading-7 text-black/60">{description}</p>
+          </ScrollReveal>
         </div>
 
         {/* Featured Visual */}
         <article>
-          <ShowcaseVisual item={featured} display={display} featured />
+          <ScrollReveal variant="scale" duration={1.2}>
+            <ShowcaseVisual item={featured} display={display} featured />
+          </ScrollReveal>
 
           <div className="mt-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-start sm:gap-8">
-            <h3 className="font-display text-3xl tracking-[-0.035em] text-[#252820] sm:text-4xl">{featured.title}</h3>
+            <ScrollReveal y={24} duration={0.9} delay={0.1}>
+              <h3 className="font-display text-3xl tracking-[-0.035em] text-charcoal sm:text-4xl">{featured.title}</h3>
+            </ScrollReveal>
 
-            <p className="font-body max-w-md text-sm leading-6 text-black/60">{featured.description}</p>
+            <ScrollReveal y={20} duration={0.85} delay={0.2} className="sm:max-w-md">
+              <p className="font-body max-w-md text-sm leading-6 text-black/60">{featured.description}</p>
+            </ScrollReveal>
           </div>
         </article>
 
         {/* Secondary Visuals */}
         {remaining.length > 0 && (
           <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-8 lg:mt-20 lg:gap-10">
-            {remaining.map((item) => (
-              <article key={item.number}>
-                <ShowcaseVisual item={item} display={display} />
+            {remaining.map((item, index) => (
+              <article key={item.number} className="min-w-0">
+                {/* Visual */}
+                <ScrollReveal variant="scale" duration={1.1} delay={index % 2 === 1 ? 0.12 : 0}>
+                  <ShowcaseVisual item={item} display={display} />
+                </ScrollReveal>
 
+                {/* Information */}
                 <div className="mt-6">
-                  <h3 className="font-display text-3xl tracking-[-0.035em] text-[#252820] sm:text-4xl">{item.title}</h3>
+                  <ScrollReveal y={24} duration={0.9} delay={0.08 + (index % 2) * 0.12}>
+                    <h3 className="font-display text-3xl tracking-[-0.035em] text-charcoal sm:text-4xl">
+                      {item.title}
+                    </h3>
+                  </ScrollReveal>
 
-                  <p className="font-body mt-3 max-w-md text-sm leading-6 text-black/60">{item.description}</p>
+                  <ScrollReveal y={20} duration={0.85} delay={0.16 + (index % 2) * 0.12}>
+                    <p className="font-body mt-3 max-w-md text-sm leading-6 text-black/60">{item.description}</p>
+                  </ScrollReveal>
                 </div>
               </article>
             ))}
