@@ -16,9 +16,73 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const siteUrl = "https://byharie.com";
+
 export const metadata: Metadata = {
-  title: "Harie — Frontend Developer",
-  description: "Portfolio of Harie, a frontend developer crafting thoughtful digital experiences.",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Harie — Frontend Developer",
+    template: "%s | Harie",
+  },
+
+  description:
+    "Portfolio of Harie, a frontend developer crafting thoughtful digital experiences through modern web technologies, creative development, and attention to detail.",
+
+  applicationName: "Harie Portfolio",
+
+  keywords: [
+    "Harie",
+    "Harie Fairuz Zaki",
+    "Frontend Developer",
+    "Frontend Engineer",
+    "Web Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Creative Developer",
+    "Web Portfolio",
+  ],
+
+  authors: [{ name: "Harie Fairuz Zaki" }],
+  creator: "Harie Fairuz Zaki",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "Harie",
+    title: "Harie — Frontend Developer",
+    description: "Crafting thoughtful digital experiences through design, technology, and creative development.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Harie — Frontend Developer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Harie — Frontend Developer",
+    description: "Crafting thoughtful digital experiences through design, technology, and creative development.",
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
