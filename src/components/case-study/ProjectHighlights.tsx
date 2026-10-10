@@ -17,7 +17,6 @@ interface ProjectHighlightsProps {
   highlight: string;
   description: string;
   items: HighlightItem[];
-  display?: "desktop" | "mobile";
 }
 
 export default function ProjectHighlights({
@@ -25,10 +24,7 @@ export default function ProjectHighlights({
   highlight,
   description,
   items,
-  display = "desktop",
 }: Readonly<ProjectHighlightsProps>) {
-  const isMobile = display === "mobile";
-
   return (
     <section id="highlights" className="bg-[#E9E5DC] px-6 py-20 sm:px-10 lg:px-14 lg:py-28">
       <div className="mx-auto max-w-350">
@@ -65,35 +61,17 @@ export default function ProjectHighlights({
                 <div className={reverse ? "lg:order-2" : ""}>
                   <ScrollReveal variant="scale" duration={1.15}>
                     <div className="relative overflow-hidden rounded-sm" style={{ backgroundColor: item.background }}>
-                      {isMobile ? (
-                        <div className="flex min-h-110 items-center justify-center px-10 py-12 sm:min-h-140 sm:py-16 lg:min-h-155">
-                          <div className="w-full max-w-52 sm:max-w-60 lg:max-w-65">
-                            <div className="overflow-hidden rounded-[2.5rem] border-[7px] border-charcoal bg-charcoal shadow-[0_25px_60px_rgba(0,0,0,0.16)]">
-                              <div className="relative aspect-9/19 overflow-hidden rounded-4xl bg-white">
-                                <Image
-                                  src={item.image}
-                                  alt={item.imageAlt}
-                                  fill
-                                  sizes="(max-width: 640px) 208px, 260px"
-                                  className="object-contain"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="relative aspect-5/4 p-8 sm:p-12">
-                          <Image
-                            src={item.image}
-                            alt={item.imageAlt}
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                            className="object-contain p-8 sm:p-12"
-                          />
-                        </div>
-                      )}
+                      <div className="relative aspect-5/4 p-8 sm:p-12">
+                        <Image
+                          src={item.image}
+                          alt={item.imageAlt}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-contain p-8 sm:p-12"
+                        />
+                      </div>
 
-                      <p className="font-body absolute bottom-5 left-5 text-[10px] uppercase tracking-[0.15em] text-charcoal/55 sm:bottom-7 sm:left-7">
+                      <p className="font-body absolute bottom-2.5 left-5 text-[10px] uppercase tracking-[0.15em] text-charcoal/55 sm:bottom-6 sm:left-7">
                         {item.caption}
                       </p>
                     </div>

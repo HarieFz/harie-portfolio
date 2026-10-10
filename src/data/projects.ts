@@ -1,4 +1,4 @@
-type ProjectDisplay = "desktop" | "mobile";
+export type CaseStudyType = "visual" | "technical" | "hybrid";
 
 export interface Project {
   id: number;
@@ -8,7 +8,9 @@ export interface Project {
   description: string;
   image: string;
   year: string;
-  display?: ProjectDisplay;
+  role: string;
+  liveUrl?: string;
+  caseStudyType?: CaseStudyType;
 }
 
 export const projects: Project[] = [
@@ -19,9 +21,11 @@ export const projects: Project[] = [
     category: "Personal Product / Web Platform",
     description:
       "A digital wedding invitation platform combining thoughtful design, personalized experiences, and an end-to-end invitation management workflow.",
-    image: "/images/projects/undangan-digital.webp",
+    image: "/images/projects/invitation/cover.webp",
     year: "2026",
-    display: "desktop",
+    role: "Design & Development",
+    liveUrl: "https://invitation.byharie.com",
+    caseStudyType: "visual",
   },
   {
     id: 2,
@@ -30,9 +34,10 @@ export const projects: Project[] = [
     category: "Fintech / WebView Application",
     description:
       "A gold-based Umrah savings platform featuring financial planning, gold trading, and travel package booking.",
-    image: "/images/projects/gtm-home.webp",
+    image: "/images/projects/gtm-umrah/cover.webp",
     year: "2025",
-    display: "mobile",
+    role: "Frontend Development",
+    caseStudyType: "visual",
   },
   {
     id: 3,
@@ -41,41 +46,43 @@ export const projects: Project[] = [
     category: "Fintech / WebView Application",
     description:
       "A Hajj-focused gold savings experience supporting travel planning, asset management, and gold transactions.",
-    image: "/images/projects/gtm_haji-home.webp",
+    image: "/images/projects/gtm-hajj/cover.webp",
     year: "2025",
-    display: "mobile",
+    role: "Frontend Development",
+    caseStudyType: "visual",
   },
   {
     id: 4,
     slug: "gold-to-mecca-admin",
     title: "Gold to Mecca — Admin",
-    category: "Fintech / Admin Dashboard",
+    category: "Fintech / Internal Management Platform",
     description:
-      "A centralized platform for managing travel agencies, packages, financial transactions, and operational workflows.",
-    image: "/images/projects/gtm_admin-paket_gtm.webp",
+      "An internal management platform supporting travel operations, financial workflows, and administrative processes within the Gold to Mecca ecosystem.",
+    image: "/images/projects/gtm-admin/cover.webp",
     year: "2025",
-    display: "desktop",
+    role: "Frontend Development",
+    caseStudyType: "technical",
   },
   {
     id: 5,
     slug: "axel-intelligence",
     title: "Axel Intelligence",
     category: "Developer Tools / API Platform",
-    description:
-      "An API integration hub designed to simplify discovery, documentation, approval workflows, and in-browser testing.",
-    image: "/images/projects/axel-landing_crop.webp",
+    description: "An API integration platform combining developer tools, AI-assisted interactions, and API discovery.",
+    image: "/images/projects/axel/cover.webp",
     year: "2025",
-    display: "desktop",
+    role: "Frontend Development",
+    caseStudyType: "hybrid",
   },
   {
     id: 6,
     slug: "tunas-unggul",
     title: "Tunas Unggul",
     category: "Education / Management System",
-    description:
-      "A comprehensive school management platform connecting academic operations, administration, finance, and reporting.",
-    image: "/images/projects/tunas_unggul-home.webp",
+    description: "A school management platform supporting academic administration, financial workflows, and reporting.",
+    image: "/images/projects/tunas-unggul/cover.webp",
     year: "2024",
-    display: "desktop",
+    role: "Frontend Development",
+    caseStudyType: "technical",
   },
 ];

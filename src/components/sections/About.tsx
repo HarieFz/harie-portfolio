@@ -44,7 +44,7 @@ export default function About() {
               <figure className="w-36 sm:w-44 lg:w-60">
                 <div className="relative aspect-3/4 overflow-hidden rounded-sm bg-[#C9C6B7]">
                   <Image
-                    src="/images/about/portrait.jpeg"
+                    src="/images/about/portrait.webp"
                     alt="Portrait of Harie"
                     fill
                     sizes="(min-width: 1024px) 240px, (min-width: 640px) 176px, 144px"

@@ -10,45 +10,22 @@ interface ProjectItemProps {
   index: number;
 }
 
-type PreviewType = "mobile" | "desktop" | "invitation";
-
 interface ProjectLayout {
-  type: PreviewType;
   background: string;
 }
 
 const projectLayouts: ProjectLayout[] = [
-  {
-    type: "invitation",
-    background: "bg-[#DDD3C9]",
-  },
-  {
-    type: "mobile",
-    background: "bg-[#E0E3D8]",
-  },
-  {
-    type: "mobile",
-    background: "bg-[#DCE2DD]",
-  },
-  {
-    type: "desktop",
-    background: "bg-[#D9DCD3]",
-  },
-  {
-    type: "desktop",
-    background: "bg-[#DDD9D3]",
-  },
-  {
-    type: "desktop",
-    background: "bg-[#D8DCD9]",
-  },
+  { background: "bg-[#DDD3C9]" },
+  { background: "bg-[#E0E3D8]" },
+  { background: "bg-[#DCE2DD]" },
+  { background: "bg-[#D9DCD3]" },
+  { background: "bg-[#DDD9D3]" },
+  { background: "bg-[#D8DCD9]" },
 ];
 
 function ProjectItem({ project, index }: Readonly<ProjectItemProps>) {
   const layout = projectLayouts[index] ?? projectLayouts[0];
-
-  const isMobile = layout.type === "mobile";
-  const isInvitation = layout.type === "invitation";
+  const isTechnical = project.caseStudyType === "technical";
 
   return (
     <article className="group min-w-0">
@@ -66,20 +43,50 @@ function ProjectItem({ project, index }: Readonly<ProjectItemProps>) {
             Harie / Selected Works
           </span>
 
-          {/* Project Screenshot */}
-          <div
-            className={`relative z-10 overflow-hidden rounded-md shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-transform duration-700 ease-out group-hover:-translate-y-2 ${
-              isMobile ? "aspect-9/16 w-[54%]" : isInvitation ? "aspect-3/4 w-[65%]" : "aspect-16/10 w-[88%]"
-            }`}
-          >
-            <Image
-              src={project.image}
-              alt={`${project.title} project preview`}
-              fill
-              sizes="(min-width: 1024px) 400px, (min-width: 640px) 40vw, 80vw"
-              className="object-cover object-top"
-            />
-          </div>
+          {/* Project Visual */}
+          {isTechnical ? (
+            <div className="relative z-10 flex aspect-4/3 w-[88%] flex-col justify-between overflow-hidden rounded-md bg-[#97AB83] p-6 shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-transform duration-700 ease-out group-hover:-translate-y-2 sm:p-8">
+              {/* Top Label */}
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-manrope text-[10px] uppercase tracking-[0.15em] text-white/70">
+                  Selected Project
+                </span>
+
+                <span className="font-manrope text-[10px] text-white/70">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+
+              {/* Project Title */}
+              <div className="flex flex-1 flex-col justify-center py-8">
+                <p className="font-manrope mb-4 text-[10px] uppercase tracking-[0.16em] text-[#B9C3A7]">
+                  Technical Case Study
+                </p>
+
+                <h4 className="font-display text-[clamp(2rem,3.5vw,3.75rem)] leading-[0.95] tracking-[-0.045em] text-cream">
+                  {project.title}
+                  <span className="text-[#B9C3A7]">.</span>
+                </h4>
+              </div>
+
+              {/* Bottom Label */}
+              <div className="flex items-center justify-between gap-3 border-t border-white/20 pt-4">
+                <span className="font-manrope text-[10px] uppercase tracking-[0.12em] text-white/70">
+                  Frontend Development
+                </span>
+
+                <span className="font-manrope text-[10px] text-white/70">{project.year}</span>
+              </div>
+            </div>
+          ) : (
+            <div className="relative z-10 aspect-4/3 w-[88%] overflow-hidden rounded-md shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-transform duration-700 ease-out group-hover:-translate-y-2">
+              <Image
+                src={project.image}
+                alt={`${project.title} project preview`}
+                fill
+                sizes="(min-width: 1024px) 400px, (min-width: 640px) 40vw, 80vw"
+                className="object-cover object-center"
+              />
+            </div>
+          )}
 
           {/* Decorative Bottom Label */}
           <span className="font-manrope absolute bottom-5 right-5 text-[10px] uppercase tracking-[0.14em] text-[#535B43]/60 sm:bottom-6 sm:right-6">

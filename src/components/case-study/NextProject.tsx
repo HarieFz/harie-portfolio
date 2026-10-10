@@ -23,7 +23,7 @@ export default function NextProject({ project, number }: Readonly<NextProjectPro
         {/* Section Header */}
         <ScrollReveal y={16} duration={0.7}>
           <div className="mb-10 flex items-center justify-between border-b border-white/20 pb-5 lg:mb-14">
-            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-white/75">06 / Up Next</p>
+            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-white/75">05 / Up Next</p>
 
             <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/75">
               Project {String(number).padStart(2, "0")}

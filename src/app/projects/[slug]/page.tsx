@@ -6,7 +6,7 @@ import CaseStudyHero from "@/components/case-study/CaseStudyHero";
 import ProjectOverview from "@/components/case-study/ProjectOverview";
 import ProjectProcess from "@/components/case-study/ProjectProcess";
 import ProjectHighlights from "@/components/case-study/ProjectHighlights";
-import ProjectShowcase from "@/components/case-study/ProjectShowcase";
+import TechnicalHighlights from "@/components/case-study/TechnicalHighlights";
 import ProjectReflection from "@/components/case-study/ProjectReflection";
 import NextProject from "@/components/case-study/NextProject";
 
@@ -17,6 +17,14 @@ interface CaseStudyPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+type Highlights = (typeof caseStudies)[keyof typeof caseStudies]["highlights"];
+
+type VisualHighlights = Extract<Highlights, { items: { image: string }[] }>;
+
+function isVisualHighlights(highlights: Highlights): highlights is VisualHighlights {
+  return highlights.items.every((item) => "image" in item && typeof item.image === "string");
 }
 
 export function generateStaticParams() {
@@ -35,8 +43,9 @@ async function CaseStudyContent({ params }: Readonly<CaseStudyPageProps>) {
   }
 
   const project = projects[currentIndex];
-
   const caseStudy = caseStudies[slug as keyof typeof caseStudies];
+
+  const isTechnicalHighlights = project.caseStudyType === "technical" || project.caseStudyType === "hybrid";
 
   // Automatically select the next project.
   const nextIndex = (currentIndex + 1) % projects.length;
@@ -49,18 +58,22 @@ async function CaseStudyContent({ params }: Readonly<CaseStudyPageProps>) {
         category={project.category}
         description={project.description}
         year={project.year}
-        role="Frontend Development"
+        role={project.role}
         image={project.image}
-        display={project.display}
+        liveUrl={project.liveUrl}
+        caseStudyType={project.caseStudyType}
       />
 
       {caseStudy?.overview && <ProjectOverview {...caseStudy.overview} />}
 
       {caseStudy?.process && <ProjectProcess {...caseStudy.process} />}
 
-      {caseStudy?.highlights && <ProjectHighlights {...caseStudy.highlights} display={project.display} />}
-
-      {caseStudy?.showcase && <ProjectShowcase {...caseStudy.showcase} display={project.display} />}
+      {caseStudy?.highlights &&
+        (isTechnicalHighlights ? (
+          <TechnicalHighlights {...caseStudy.highlights} />
+        ) : isVisualHighlights(caseStudy.highlights) ? (
+          <ProjectHighlights {...caseStudy.highlights} />
+        ) : null)}
 
       {caseStudy?.reflection && <ProjectReflection {...caseStudy.reflection} />}
 
