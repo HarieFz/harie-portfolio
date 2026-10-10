@@ -7,15 +7,15 @@ import AnchorLink from "../ui/AnchorLink";
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/HarieFz",
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/",
+    href: "https://www.linkedin.com/in/harie-fairuz-zaki-691b05136",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/hariefairuz",
   },
 ];
 
