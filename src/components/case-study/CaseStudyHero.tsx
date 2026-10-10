@@ -1,6 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 import CaseStudyEntrance from "@/components/ui/CaseStudyEntrance";
+import type { CaseStudyType } from "@/data/projects";
 
 interface CaseStudyHeroProps {
   title: string;
@@ -9,7 +12,8 @@ interface CaseStudyHeroProps {
   year: string;
   role: string;
   image: string;
-  display?: "desktop" | "mobile";
+  liveUrl?: string;
+  caseStudyType?: CaseStudyType;
 }
 
 export default function CaseStudyHero({
@@ -19,9 +23,10 @@ export default function CaseStudyHero({
   year,
   role,
   image,
-  display = "desktop",
+  liveUrl,
+  caseStudyType = "visual",
 }: Readonly<CaseStudyHeroProps>) {
-  const isMobile = display === "mobile";
+  const isTechnical = caseStudyType === "technical";
 
   return (
     <CaseStudyEntrance>
@@ -60,68 +65,98 @@ export default function CaseStudyHero({
             </div>
           </div>
 
-          {/* Metadata */}
-          <div className="mt-12 grid grid-cols-2 gap-6 border-t border-black/15 pt-6 sm:flex sm:gap-20 lg:mt-16">
-            <div data-case-meta>
-              <p className="font-body mb-2 text-[10px] uppercase tracking-[0.18em] text-black/45">Role</p>
-              <p className="font-body text-xs text-charcoal">{role}</p>
+          {/* Metadata & Live Website */}
+          <div className="mt-12 flex flex-col gap-8 border-t border-black/15 pt-6 sm:flex-row sm:items-end sm:justify-between lg:mt-16">
+            <div className="grid grid-cols-2 gap-6 sm:flex sm:gap-20">
+              <div data-case-meta>
+                <p className="font-body mb-2 text-[10px] uppercase tracking-[0.18em] text-black/45">Role</p>
+                <p className="font-body text-xs text-charcoal">{role}</p>
+              </div>
+
+              <div data-case-meta>
+                <p className="font-body mb-2 text-[10px] uppercase tracking-[0.18em] text-black/45">Year</p>
+                <p className="font-body text-xs text-charcoal">{year}</p>
+              </div>
             </div>
 
-            <div data-case-meta>
-              <p className="font-body mb-2 text-[10px] uppercase tracking-[0.18em] text-black/45">Year</p>
-              <p className="font-body text-xs text-charcoal">{year}</p>
-            </div>
+            {liveUrl && (
+              <div data-case-meta>
+                <Link
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${title} live website (opens in a new tab)`}
+                  className="group inline-flex items-center gap-5 border-b border-charcoal/40 pb-2 transition-colors duration-300 hover:border-olive"
+                >
+                  <span className="font-body text-xs font-medium text-charcoal transition-colors duration-300 group-hover:text-olive">
+                    Visit Live Website
+                  </span>
+
+                  <ArrowUpRight
+                    size={16}
+                    className="text-charcoal transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-olive"
+                  />
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Project Visual */}
-          <div
-            data-case-visual
-            className={`relative mt-14 overflow-hidden rounded-sm lg:mt-20 ${
-              isMobile ? "bg-[#D8DCD3] px-8 py-14 sm:px-16 sm:py-20 lg:py-24" : "bg-[#D8DCD3] p-6 sm:p-10 lg:p-16"
-            }`}
-          >
-            {isMobile ? (
-              <div className="relative mx-auto w-full max-w-65 sm:max-w-75 lg:max-w-85">
-                {/* Smartphone Frame */}
-                <div className="relative overflow-hidden rounded-[2.5rem] border-[7px] border-charcoal bg-charcoal shadow-[0_30px_70px_rgba(0,0,0,0.18)] sm:rounded-[3rem] sm:border-[9px]">
-                  <div className="relative aspect-9/19 overflow-hidden rounded-4xl bg-white sm:rounded-[2.4rem]">
-                    <Image
-                      src={image}
-                      alt={`${title} mobile application preview`}
-                      fill
-                      priority
-                      sizes="(max-width: 640px) 260px, 340px"
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
+          {isTechnical ? (
+            <div
+              data-case-visual
+              className="relative mt-14 flex min-h-72 flex-col justify-between overflow-hidden rounded-sm bg-[#97AB83] p-8 text-cream sm:min-h-96 sm:p-12 lg:mt-20 lg:min-h-112 lg:p-16"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <p className="font-body text-[10px] uppercase tracking-[0.2em] text-white/70">Harie / Selected Work</p>
+
+                <p className="font-body text-[10px] uppercase tracking-[0.2em] text-white/70">{year}</p>
               </div>
-            ) : (
-              <div className="relative aspect-16/10 w-full overflow-hidden rounded-sm">
+
+              <div className="py-12">
+                <p className="font-body mb-5 text-[10px] uppercase tracking-[0.25em] text-white/70">
+                  Internal Platform / Frontend Development
+                </p>
+
+                <h2 className="font-display max-w-5xl text-[clamp(3.5rem,8vw,8rem)] leading-[0.9] tracking-[-0.055em]">
+                  {title}
+                  <span className="text-[#B9C3A7]">.</span>
+                </h2>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 pt-5">
+                <p className="font-body text-[10px] uppercase tracking-[0.18em] text-white/70">Technical Case Study</p>
+
+                <p className="font-body text-[10px] uppercase tracking-[0.18em] text-white/70">Project Overview</p>
+              </div>
+            </div>
+          ) : (
+            <div
+              data-case-visual
+              className="relative mt-14 overflow-hidden rounded-sm bg-[#D8DCD3] px-6 py-12 sm:px-10 sm:py-16 lg:mt-20 lg:px-16 lg:py-20"
+            >
+              <div className="relative mx-auto aspect-4/3 w-full max-w-225 overflow-hidden rounded-sm">
                 <Image
                   src={image}
                   alt={`${title} project preview`}
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 1400px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 900px"
                   className="object-contain"
                 />
               </div>
-            )}
 
-            {/* Decorative Labels */}
-            <div className="pointer-events-none absolute left-5 top-5 hidden sm:block lg:left-8 lg:top-8">
-              <p className="font-body text-[10px] uppercase tracking-[0.18em] text-charcoal/50">
-                Harie / Selected Work
-              </p>
-            </div>
+              <div className="pointer-events-none absolute left-5 top-5 hidden sm:block lg:left-8 lg:top-8">
+                <p className="font-body text-[10px] uppercase tracking-[0.18em] text-charcoal/50">
+                  Harie / Selected Work
+                </p>
+              </div>
 
-            <div className="pointer-events-none absolute bottom-5 right-5 hidden sm:block lg:bottom-8 lg:right-8">
-              <p className="font-body text-[10px] uppercase tracking-[0.18em] text-charcoal/50">
-                {isMobile ? "Mobile Experience" : "Digital Experience"}
-              </p>
+              <div className="pointer-events-none absolute bottom-5 right-5 hidden sm:block lg:bottom-8 lg:right-8">
+                <p className="font-body text-[10px] uppercase tracking-[0.18em] text-charcoal/50">Digital Experience</p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
     </CaseStudyEntrance>

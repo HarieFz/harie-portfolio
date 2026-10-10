@@ -48,7 +48,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Link
-          href="mailto:hello@example.com"
+          href="mailto:hfairuzzaki@gmail.com"
           className="group hidden items-center gap-5 rounded-full bg-cream py-1.5 pl-5 pr-1.5 text-charcoal transition-colors hover:bg-white md:flex"
         >
           <span className="font-body text-xs font-semibold">Let&apos;s Talk</span>
@@ -117,7 +117,7 @@ export default function Navbar() {
 
               {/* Mobile CTA */}
               <Link
-                href="mailto:hello@example.com"
+                href="mailto:hfairuzzaki@gmail.com"
                 onClick={closeMenu}
                 className={`font-body mt-3 flex items-center justify-between rounded-full bg-cream px-4 py-3 text-xs font-semibold text-charcoal transition-all duration-300 motion-reduce:transition-none ${
                   isOpen ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"

@@ -33,7 +33,7 @@ export default function ProjectReflection({
         {/* Section Header */}
         <ScrollReveal y={16} duration={0.7}>
           <div className="mb-16 flex items-center justify-between border-b border-olive-dark/15 pb-5 lg:mb-24">
-            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-olive">05 / Tech Stack & Reflection</p>
+            <p className="font-body text-[10px] uppercase tracking-[0.2em] text-olive">04 / Tech Stack & Reflection</p>
 
             <span className="font-body text-[10px] uppercase tracking-[0.2em] text-olive">Behind The Build</span>
           </div>
@@ -115,7 +115,7 @@ export default function ProjectReflection({
 
             <div className="mt-10 space-y-6">
               {reflection.paragraphs.map((paragraph, index) => (
-                <ScrollReveal key={index} y={24} duration={0.9} delay={index * 0.12}>
+                <ScrollReveal key={index + 1} y={24} duration={0.9} delay={index * 0.12}>
                   <p className="font-body max-w-lg text-sm leading-8 text-olive-dark/75 sm:text-base">{paragraph}</p>
                 </ScrollReveal>
               ))}

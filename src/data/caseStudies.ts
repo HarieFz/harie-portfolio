@@ -67,7 +67,7 @@ export const caseStudies = {
           title: "Distinctive Invitation Themes",
           description:
             "Four carefully crafted themes, each with its own visual identity, typography, and storytelling approach. From warm and personal to cinematic and culturally inspired, every theme offers a different way to celebrate a couple's story.",
-          image: "/images/case-study/harie/themes.webp",
+          image: "/images/projects/invitation/highlight-01.webp",
           imageAlt: "Harie Digital Invitation theme collection",
           caption: "Invitation Theme Collection",
           background: "#D8DCD3",
@@ -77,7 +77,7 @@ export const caseStudies = {
           title: "Thoughtful Guest Experience",
           description:
             "Each invitation brings together essential wedding details and interactive features, including RSVP, photo galleries, event locations, countdowns, digital gifts, and music, all designed with a mobile-first experience in mind.",
-          image: "/images/case-study/harie/guest-experience.webp",
+          image: "/images/projects/invitation/highlight-02.webp",
           imageAlt: "Harie Digital Invitation guest experience",
           caption: "Interactive Wedding Invitation",
           background: "#DDD3C9",
@@ -87,42 +87,9 @@ export const caseStudies = {
           title: "A Streamlined Workflow",
           description:
             "A structured client submission form and private admin dashboard simplify the process of collecting information, reviewing submissions, preparing invitation previews, and publishing completed invitations.",
-          image: "/images/case-study/harie/workflow.webp",
+          image: "/images/projects/invitation/highlight-03.webp",
           imageAlt: "Harie Digital Invitation administration workflow",
           caption: "Client Form & Admin Dashboard",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the details.",
-      description:
-        "A visual exploration of the interfaces, interactions, and design decisions that shape the final experience.",
-      items: [
-        {
-          number: "01",
-          title: "The Platform",
-          description: "A welcoming starting point for discovering invitation themes.",
-          image: "/images/case-study/harie/showcase-platform.webp",
-          imageAlt: "Harie Digital Invitation platform interface",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "The Invitation",
-          description: "Personalized wedding stories brought to life through digital design.",
-          image: "/images/case-study/harie/showcase-invitation.webp",
-          imageAlt: "Harie Digital Invitation wedding invitation interface",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "The Management",
-          description: "A structured workspace for managing the invitation workflow.",
-          image: "/images/case-study/harie/showcase-management.webp",
-          imageAlt: "Harie Digital Invitation admin management interface",
           background: "#DCE2DD",
         },
       ],
@@ -225,7 +192,7 @@ export const caseStudies = {
           title: "Gold-Based Savings",
           description:
             "Savings plans help users prepare for Umrah with progress tracking, savings details, reminders, and financial insights that make their goals easier to follow.",
-          image: "/images/case-study/gtm-umrah/savings.webp",
+          image: "/images/projects/gtm-umrah/highlight-01.webp",
           imageAlt: "Gold to Mecca Umrah savings interface",
           caption: "Savings Plans & Progress",
           background: "#D8DCD3",
@@ -235,7 +202,7 @@ export const caseStudies = {
           title: "Gold & Wallet Management",
           description:
             "A connected financial experience for viewing gold and cash balances, managing gold purchases and sales, and reviewing transaction history and asset ownership.",
-          image: "/images/case-study/gtm-umrah/wallet.webp",
+          image: "/images/projects/gtm-umrah/highlight-02.webp",
           imageAlt: "Gold to Mecca Umrah wallet interface",
           caption: "Gold Wallet & Transactions",
           background: "#DDD3C9",
@@ -245,41 +212,9 @@ export const caseStudies = {
           title: "Umrah Package Booking",
           description:
             "Users can explore available Umrah travel packages and continue through booking and payment workflows within the same application experience.",
-          image: "/images/case-study/gtm-umrah/booking.webp",
+          image: "/images/projects/gtm-umrah/highlight-03.webp",
           imageAlt: "Gold to Mecca Umrah package booking interface",
           caption: "Travel Packages & Booking",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the experience.",
-      description: "Selected interfaces from the mobile financial planning and Umrah journey experience.",
-      items: [
-        {
-          number: "01",
-          title: "The Dashboard",
-          description: "An overview of savings, wallets, and financial activity.",
-          image: "/images/case-study/gtm-umrah/dashboard.webp",
-          imageAlt: "Gold to Mecca Umrah dashboard",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "The Savings Journey",
-          description: "Tracking progress toward an Umrah savings goal.",
-          image: "/images/case-study/gtm-umrah/savings-detail.webp",
-          imageAlt: "Gold to Mecca Umrah savings details",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "The Booking Experience",
-          description: "Exploring and selecting Umrah travel packages.",
-          image: "/images/case-study/gtm-umrah/packages.webp",
-          imageAlt: "Gold to Mecca Umrah travel packages",
           background: "#DCE2DD",
         },
       ],
@@ -319,19 +254,20 @@ export const caseStudies = {
       highlight: "to prepare for Hajj.",
       paragraphs: [
         "Gold to Mecca — Hajj is a mobile WebView experience designed to support Hajj financial planning through gold-based savings and asset management. Integrated into the BPKH native application, it provides access to financial tools within an existing mobile ecosystem.",
-        "The experience brings together gold, cash, and RPED wallets, financial insights, gold transactions, and Hajj-related planning. Its purpose is to make important financial information accessible while helping users navigate their preparation for Hajj.",
+        "The experience brings together three Hajj savings plans—Registration, Settlement, and Travel Expenses—alongside gold, cash, and RPED wallets, financial insights, and gold transactions. Each savings plan supports a different stage of Hajj preparation, from securing a place in the pilgrimage queue to completing payments and preparing travel funds.",
       ],
       points: [
         {
           number: "01",
           title: "The Purpose",
-          description: "Support Hajj preparation through accessible financial tools and gold-based asset management.",
+          description:
+            "Support different stages of Hajj preparation through dedicated savings plans and gold-based financial tools.",
         },
         {
           number: "02",
           title: "The Experience",
           description:
-            "Make wallet balances, asset ownership, transaction history, and financial insights easier to understand.",
+            "Make savings progress, wallet balances, asset ownership, and financial activity easier to understand and manage.",
         },
         {
           number: "03",
@@ -349,20 +285,20 @@ export const caseStudies = {
           label: "01 / The Challenge",
           title: "Bringing financial clarity to a mobile experience.",
           description:
-            "The application combines different wallet types, gold transactions, and financial information within a mobile environment. The challenge was to organize these features into an experience that remains clear, consistent, and practical for everyday use.",
+            "The application combines multiple Hajj savings plans, wallet types, gold transactions, and financial information within a mobile environment. The challenge was to organize these connected features into an experience that remains clear, consistent, and practical for everyday use.",
           points: [
-            "Present gold, cash, and RPED wallet information clearly.",
-            "Make asset ownership and transaction history easy to navigate.",
-            "Maintain consistent interactions within a native application WebView.",
+            "Present different Hajj savings plans and their progress clearly.",
+            "Organize gold, cash, and RPED wallet information consistently.",
+            "Maintain intuitive financial workflows within a native application WebView.",
           ],
         },
         {
           label: "02 / The Approach",
           title: "Structured interfaces for connected workflows.",
           description:
-            "The frontend uses reusable Vue components, typed data structures, and API-driven interactions to support financial workflows. A consistent visual system and clear information hierarchy help users navigate between wallets, transactions, and financial details.",
+            "The frontend uses reusable Vue components, typed data structures, and API-driven interactions to support savings and financial workflows. A consistent visual system and clear information hierarchy help users navigate between savings plans, wallets, transactions, and financial details.",
           points: [
-            "Build reusable UI patterns for wallets and financial information.",
+            "Build reusable UI patterns for savings plans, wallets, and financial information.",
             "Organize application state and server data using Pinia and Vue Query.",
             "Support financial forms and transactions with validation and clear feedback.",
           ],
@@ -374,69 +310,36 @@ export const caseStudies = {
       heading: "Preparing for Hajj.",
       highlight: "Managing with confidence.",
       description:
-        "Selected features that connect wallet management, gold transactions, and financial planning within the Hajj experience.",
+        "A closer look at the savings plans and connected financial tools that support different stages of Hajj preparation.",
       items: [
         {
           number: "01",
+          title: "Hajj Savings Plans",
+          description:
+            "Three dedicated savings plans support different stages of Hajj preparation: Registration for securing a pilgrimage queue number, Settlement for completing Hajj payments, and Travel Expenses for preparing personal funds during the journey.",
+          image: "/images/projects/gtm-hajj/highlight-01.webp",
+          imageAlt: "Gold to Mecca Hajj savings plans interface",
+          caption: "Registration, Settlement & Travel Savings",
+          background: "#D8DCD3",
+        },
+        {
+          number: "02",
           title: "Multi-Wallet Experience",
           description:
             "A connected interface for viewing and managing gold, cash, and RPED wallets, with financial information organized for clarity and accessibility.",
-          image: "/images/case-study/gtm-hajj/wallets.webp",
+          image: "/images/projects/gtm-hajj/highlight-02.webp",
           imageAlt: "Gold to Mecca Hajj multi-wallet interface",
           caption: "Gold, Cash & RPED Wallets",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "Gold Transactions",
-          description:
-            "Gold buying and selling workflows, supported by transaction histories and asset ownership information that help users follow their financial activity.",
-          image: "/images/case-study/gtm-hajj/transactions.webp",
-          imageAlt: "Gold to Mecca Hajj gold transaction interface",
-          caption: "Gold Trading & History",
           background: "#DDD3C9",
         },
         {
           number: "03",
-          title: "Financial Insights & Withdrawals",
+          title: "Gold Transactions & Financial Insights",
           description:
-            "Financial details, profit and loss information, and withdrawal flows presented through a structured mobile interface.",
-          image: "/images/case-study/gtm-hajj/financial-insights.webp",
-          imageAlt: "Gold to Mecca Hajj financial insights interface",
-          caption: "Financial Overview",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the Hajj experience.",
-      description:
-        "Selected mobile interfaces showcasing the financial tools and user journeys within Gold to Mecca — Hajj.",
-      items: [
-        {
-          number: "01",
-          title: "The Wallet Overview",
-          description: "A centralized view of financial balances and assets.",
-          image: "/images/case-study/gtm-hajj/dashboard.webp",
-          imageAlt: "Gold to Mecca Hajj wallet dashboard",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "The Gold Experience",
-          description: "Managing gold transactions and reviewing ownership details.",
-          image: "/images/case-study/gtm-hajj/gold.webp",
-          imageAlt: "Gold to Mecca Hajj gold management screen",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "The Financial Journey",
-          description: "Accessing financial insights and withdrawal workflows.",
-          image: "/images/case-study/gtm-hajj/withdrawal.webp",
-          imageAlt: "Gold to Mecca Hajj withdrawal interface",
+            "Gold buying and selling workflows connect with transaction histories, asset ownership, profit and loss information, and withdrawal features to provide a clearer view of financial activity.",
+          image: "/images/projects/gtm-hajj/highlight-03.webp",
+          imageAlt: "Gold to Mecca Hajj transactions and financial insights interface",
+          caption: "Gold Trading & Financial Overview",
           background: "#DCE2DD",
         },
       ],
@@ -464,7 +367,7 @@ export const caseStudies = {
       reflection: {
         title: "Consistency across connected products.",
         paragraphs: [
-          "Working on Gold to Mecca — Hajj reinforced the importance of presenting financial information with clarity and consistency. Even when products share similar technologies, their workflows and user needs can differ, requiring careful consideration of how information is organized and presented.",
+          "Working on Gold to Mecca — Hajj reinforced the importance of presenting financial information with clarity and consistency. Supporting different savings plans alongside wallet management and gold transactions required careful consideration of how complex information is organized and presented.",
           "The project also provided experience in building mobile-first interfaces within an existing native application ecosystem. It strengthened my approach to reusable components, API integration, and maintaining a cohesive experience across related financial products.",
         ],
       },
@@ -476,27 +379,27 @@ export const caseStudies = {
       heading: "Behind every journey,",
       highlight: "a connected operation.",
       paragraphs: [
-        "Gold to Mecca — Admin is a web-based management platform supporting the operational workflows behind the Gold to Mecca ecosystem. It provides a centralized interface for managing travel agencies, Umrah and Hajj packages, financial transactions, and administrative activities.",
-        "The platform brings together business data, operational requests, payment records, and account management into structured workflows. By organizing these processes within one dashboard, it helps administrative teams navigate complex information and manage day-to-day operations.",
+        "Gold to Mecca — Admin is a web-based internal management platform supporting operational activities within the Gold to Mecca ecosystem. It provides administrative tools for managing travel agencies, Umrah and Hajj packages, financial records, and related business information.",
+        "The platform brings different management workflows into a structured web interface. My role focused on frontend development, building reusable interfaces, integrating APIs, and implementing consistent interactions across administrative modules.",
       ],
       points: [
         {
           number: "01",
           title: "The Purpose",
           description:
-            "Support the operational management of financial services, travel packages, and administrative activities.",
+            "Support travel management, financial administration, and operational activities through a centralized platform.",
         },
         {
           number: "02",
           title: "The Experience",
           description:
-            "Provide structured dashboards, data tables, forms, and management workflows for administrative users.",
+            "Provide clear data tables, structured forms, and consistent interactions for administrative workflows.",
         },
         {
           number: "03",
-          title: "The Platform",
+          title: "My Role",
           description:
-            "Build a scalable frontend experience for managing interconnected business and financial operations.",
+            "Develop frontend interfaces, integrate backend APIs, and maintain reusable UI patterns across modules.",
         },
       ],
     },
@@ -507,24 +410,24 @@ export const caseStudies = {
       columns: [
         {
           label: "01 / The Challenge",
-          title: "Managing complexity across multiple workflows.",
+          title: "Making complex information easier to manage.",
           description:
-            "The administrative platform covers different operational areas, from travel agency and package management to payments, withdrawals, and user administration. The challenge was to organize these interconnected processes into a consistent interface that supports efficient daily operations.",
+            "An administrative platform involves multiple types of information, forms, and operational workflows. The frontend challenge was to present these elements consistently while keeping interfaces readable, responsive, and practical for daily use.",
           points: [
-            "Present complex business data through readable tables and dashboards.",
-            "Support multiple management workflows with consistent interactions.",
-            "Handle forms, transaction details, and operational states clearly.",
+            "Organize complex information through structured tables and forms.",
+            "Maintain consistent UI patterns across different management modules.",
+            "Handle asynchronous data, form states, and user feedback clearly.",
           ],
         },
         {
           label: "02 / The Approach",
-          title: "A structured system built around usability.",
+          title: "Reusable components for connected workflows.",
           description:
-            "The frontend was developed using reusable Vue components, consistent interface patterns, and API-driven data management. Shared layouts and interaction patterns help keep administrative workflows predictable while supporting different operational requirements.",
+            "I developed frontend interfaces using Vue 3 and TypeScript, with reusable components and API-driven data handling. Shared UI patterns, structured state management, and form validation helped maintain consistency across different administrative features.",
           points: [
-            "Create reusable patterns for data tables, forms, and management screens.",
-            "Organize application state and API interactions using Pinia and Vue Query.",
-            "Apply form validation and clear feedback throughout operational workflows.",
+            "Build reusable components for data tables, forms, and management interfaces.",
+            "Manage application state and server data using Pinia and TanStack Vue Query.",
+            "Implement API integration, form validation, loading states, and error feedback.",
           ],
         },
       ],
@@ -533,70 +436,26 @@ export const caseStudies = {
     highlights: {
       heading: "One platform.",
       highlight: "Multiple operations.",
-      description: "A closer look at the management tools that support the Gold to Mecca ecosystem behind the scenes.",
+      description:
+        "An overview of the platform's core capabilities and the frontend work involved in supporting administrative workflows.",
       items: [
         {
           number: "01",
-          title: "Operational Dashboard",
-          description:
-            "A centralized workspace for accessing operational information, navigating management modules, and reviewing activities across the platform.",
-          image: "/images/case-study/gtm-admin/dashboard.webp",
-          imageAlt: "Gold to Mecca Admin operational dashboard",
-          caption: "Dashboard & Overview",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
           title: "Travel & Package Management",
           description:
-            "Administrative workflows for managing travel agencies, Umrah and Hajj packages, master data, and related business information through structured forms and data tables.",
-          image: "/images/case-study/gtm-admin/packages.webp",
-          imageAlt: "Gold to Mecca Admin travel package management",
-          caption: "Travel Agencies & Packages",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "Financial & Transaction Workflows",
-          description:
-            "Interfaces for reviewing and managing orders, vendor payments, withdrawals, and other financial activities with organized transaction details and operational states.",
-          image: "/images/case-study/gtm-admin/transactions.webp",
-          imageAlt: "Gold to Mecca Admin financial transaction management",
-          caption: "Payments & Transactions",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the operations.",
-      description:
-        "Selected interfaces highlighting the dashboard, management modules, and transaction workflows within Gold to Mecca — Admin.",
-      items: [
-        {
-          number: "01",
-          title: "The Dashboard",
-          description: "A centralized entry point for administrative activities and operational information.",
-          image: "/images/case-study/gtm-admin/showcase-dashboard.webp",
-          imageAlt: "Gold to Mecca Admin dashboard interface",
-          background: "#D8DCD3",
+            "Management interfaces for travel agencies, Umrah and Hajj packages, and related business information. My frontend work involved implementing structured data tables, reusable forms, and API-connected management interactions.",
         },
         {
           number: "02",
-          title: "The Management",
-          description: "Structured data tables and forms for managing business information.",
-          image: "/images/case-study/gtm-admin/showcase-management.webp",
-          imageAlt: "Gold to Mecca Admin management interface",
-          background: "#DDD3C9",
+          title: "Financial & Transaction Management",
+          description:
+            "Administrative interfaces supporting financial records, payment information, and transaction-related activities. I worked on presenting structured data, handling API responses, and implementing consistent interface states.",
         },
         {
           number: "03",
-          title: "The Transactions",
-          description: "Detailed operational views for payments, orders, and withdrawals.",
-          image: "/images/case-study/gtm-admin/showcase-transactions.webp",
-          imageAlt: "Gold to Mecca Admin transaction interface",
-          background: "#DCE2DD",
+          title: "Reusable Frontend Architecture",
+          description:
+            "A component-based frontend approach using Vue 3 and TypeScript to support multiple administrative modules. Shared interface patterns, state management, form validation, and API integration helped maintain consistency and reduce duplicated implementation.",
         },
       ],
     },
@@ -622,8 +481,8 @@ export const caseStudies = {
       reflection: {
         title: "Thinking beyond individual screens.",
         paragraphs: [
-          "Working on Gold to Mecca — Admin highlighted the importance of consistency across complex administrative interfaces. With multiple modules and operational workflows, reusable components and predictable interaction patterns became essential for keeping the frontend maintainable and the experience understandable.",
-          "The project strengthened my approach to building data-intensive applications, handling API-driven workflows, and organizing frontend architecture around practical business needs. It also reinforced how thoughtful interface decisions can make complex operational tasks easier to navigate.",
+          "Working on Gold to Mecca — Admin reinforced the importance of building consistent frontend experiences across multiple administrative modules. Reusable components, predictable interaction patterns, and structured data handling were essential for keeping complex interfaces maintainable and understandable.",
+          "The project strengthened my experience with Vue 3, TypeScript, API integration, and state management in data-intensive applications. It also improved my approach to frontend architecture, form validation, and designing interfaces around practical operational needs.",
         ],
       },
     },
@@ -634,125 +493,80 @@ export const caseStudies = {
       heading: "Making API integration",
       highlight: "more approachable.",
       paragraphs: [
-        "Axel Intelligence is a centralized API integration platform designed to simplify how developers discover, understand, and work with available APIs. It brings API documentation, access requests, and testing capabilities into a connected web experience.",
-        "The platform supports the integration journey from exploring API services and reviewing technical documentation to managing approval workflows and testing requests directly in the browser. AI-assisted features also help make the development experience more accessible.",
+        "Axel Intelligence is a developer-focused platform designed to make API discovery and integration more accessible. It brings together API exploration, AI-assisted interactions, and account access within a connected web experience.",
+        "My role focused on frontend development across the public landing page, AI chat interface, authentication flows, and API catalogue. The work involved building responsive interfaces, reusable React components, and API-connected interactions while maintaining a consistent user experience.",
       ],
       points: [
         {
           number: "01",
           title: "The Purpose",
-          description: "Simplify API discovery, documentation access, and integration workflows for developers.",
+          description: "Make API services easier to discover and explore through a developer-focused platform.",
         },
         {
           number: "02",
           title: "The Experience",
-          description: "Bring API exploration, access management, and interactive testing into a consistent interface.",
+          description: "Connect product introduction, AI-assisted interactions, account access, and API discovery.",
         },
         {
           number: "03",
-          title: "The Platform",
+          title: "My Role",
           description:
-            "Deliver a developer-focused web application with API-driven interactions and reusable frontend components.",
+            "Develop the landing page, AI chat, authentication interfaces, and API catalogue using React and TypeScript.",
         },
       ],
     },
 
     process: {
-      heading: "Complex integrations.",
-      highlight: "Simpler interactions.",
+      heading: "Complex technology.",
+      highlight: "Simpler experiences.",
       columns: [
         {
           label: "01 / The Challenge",
-          title: "Making technical workflows easier to navigate.",
+          title: "Making developer tools feel approachable.",
           description:
-            "API integration involves multiple steps, from discovering available services and understanding documentation to requesting access and validating API responses. The challenge was to organize these technical workflows into a clear interface without sacrificing the detail developers need.",
+            "Developer platforms need to communicate technical capabilities while remaining accessible to different users. The frontend challenge was to create clear, responsive interfaces across public-facing pages and interactive application features.",
           points: [
-            "Present API catalogs and technical documentation clearly.",
-            "Support access requests and approval-related workflows.",
-            "Make request configuration and API responses easier to inspect.",
+            "Present the platform's capabilities through a clear and engaging landing page.",
+            "Create intuitive interfaces for AI-assisted conversations and API discovery.",
+            "Maintain consistent interactions across authentication and application screens.",
           ],
         },
         {
           label: "02 / The Approach",
-          title: "A developer experience built around clarity.",
+          title: "Consistent interfaces across different experiences.",
           description:
-            "The frontend was developed with reusable React components, TypeScript, and REST API integration. Consistent interface patterns and structured interactions help developers navigate documentation, manage access requests, and test APIs within the platform.",
+            "I developed frontend features using React and TypeScript, focusing on reusable components, responsive layouts, and API integration. Consistent interface patterns helped connect the public landing page with the platform's interactive features.",
           points: [
-            "Build reusable components for API catalogs and documentation.",
-            "Connect frontend workflows with REST API services.",
-            "Provide interactive request and response views for API testing.",
+            "Build responsive landing page sections and reusable UI components.",
+            "Implement AI chat interfaces and authentication flows.",
+            "Develop API catalogue interfaces with structured information and API-driven data.",
           ],
         },
       ],
     },
 
     highlights: {
-      heading: "From discovery",
-      highlight: "to integration.",
-      description: "A closer look at the tools and workflows designed to make API integration more accessible.",
+      heading: "From introduction",
+      highlight: "to exploration.",
+      description: "A closer look at my frontend contributions across the Axel Intelligence platform.",
       items: [
         {
           number: "01",
-          title: "API Discovery & Documentation",
+          title: "Public Landing Page",
           description:
-            "A centralized catalog for exploring available APIs, understanding their capabilities, and accessing the technical information needed to begin integration.",
-          image: "/images/case-study/axel/api-catalog.webp",
-          imageAlt: "Axel Intelligence API catalog and documentation",
-          caption: "API Catalog & Documentation",
-          background: "#D8DCD3",
+            "Developed a responsive landing page introducing Axel Intelligence, focusing on clear content presentation, reusable components, and consistent layouts across different screen sizes.",
         },
         {
           number: "02",
-          title: "Access & Approval Workflows",
+          title: "AI Chat Experience",
           description:
-            "Structured interfaces for requesting API access and following approval-related processes, helping developers navigate the steps required before integration.",
-          image: "/images/case-study/axel/access-management.webp",
-          imageAlt: "Axel Intelligence API access management",
-          caption: "Access Requests & Approvals",
-          background: "#DDD3C9",
+            "Built conversational interfaces for AI-assisted interactions, including message presentation, user input, and API-connected communication.",
         },
         {
           number: "03",
-          title: "Interactive API Testing",
+          title: "Authentication & API Catalogue",
           description:
-            "Browser-based tools for configuring API requests, submitting test calls, and inspecting responses without leaving the platform.",
-          image: "/images/case-study/axel/api-testing.webp",
-          imageAlt: "Axel Intelligence interactive API testing interface",
-          caption: "API Requests & Responses",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the developer experience.",
-      description:
-        "Selected interfaces highlighting API discovery, documentation, and interactive integration workflows.",
-      items: [
-        {
-          number: "01",
-          title: "The API Catalog",
-          description: "Exploring available services through a centralized interface.",
-          image: "/images/case-study/axel/showcase-catalog.webp",
-          imageAlt: "Axel Intelligence API catalog interface",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "The Documentation",
-          description: "Understanding endpoints, parameters, and integration requirements.",
-          image: "/images/case-study/axel/showcase-documentation.webp",
-          imageAlt: "Axel Intelligence API documentation interface",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "The API Playground",
-          description: "Configuring requests and reviewing API responses in the browser.",
-          image: "/images/case-study/axel/showcase-playground.webp",
-          imageAlt: "Axel Intelligence API playground interface",
-          background: "#DCE2DD",
+            "Developed authentication interfaces and API catalogue components, supporting account access and structured API discovery through reusable React components.",
         },
       ],
     },
@@ -760,8 +574,7 @@ export const caseStudies = {
     reflection: {
       heading: "Built for developers.",
       highlight: "Focused on usability.",
-      description:
-        "The frontend technologies and engineering considerations behind a developer-focused API integration platform.",
+      description: "The frontend technologies and engineering considerations behind a developer-focused API platform.",
       techStack: [
         {
           category: "Frontend",
@@ -777,10 +590,10 @@ export const caseStudies = {
         },
       ],
       reflection: {
-        title: "Designing for technical users.",
+        title: "Connecting product experience with functionality.",
         paragraphs: [
-          "Working on Axel Intelligence strengthened my understanding of how developers interact with API platforms. Building interfaces for documentation, access management, and request testing required attention to both technical accuracy and usability.",
-          "The project reinforced the value of clear information architecture, reusable React components, and reliable API integration. It also showed how thoughtful frontend development can reduce friction in complex technical workflows and make developer tools easier to use.",
+          "Working on Axel Intelligence gave me experience developing both public-facing pages and interactive application features. Building the landing page, AI chat, authentication, and API catalogue required balancing visual consistency with different functional requirements.",
+          "The project strengthened my approach to reusable React components, responsive design, and API-connected interfaces. It also reinforced the importance of creating intuitive experiences that help users navigate technical products more comfortably.",
         ],
       },
     },
@@ -791,27 +604,27 @@ export const caseStudies = {
       heading: "Connecting education",
       highlight: "with better operations.",
       paragraphs: [
-        "Tunas Unggul is a comprehensive school management platform designed to support academic and administrative operations across multiple education levels, from Play School to Senior High School. It brings essential school activities into a connected digital environment.",
-        "The platform covers academic management, student affairs, finance, human resources, school services, and reporting. Through structured workflows and role-based access, it helps different school stakeholders manage information and everyday operations within one system.",
+        "Tunas Unggul is a school management platform supporting academic and administrative operations across multiple education levels, from Play School to Senior High School. It brings different school activities and management workflows into a connected digital environment.",
+        "The platform covers academic management, student affairs, finance, human resources, school services, and reporting. My role focused on frontend development, building structured interfaces, integrating backend APIs, and maintaining consistent user experiences across different management modules.",
       ],
       points: [
         {
           number: "01",
           title: "The Purpose",
           description:
-            "Bring academic, administrative, and operational activities together within a centralized school management platform.",
+            "Support academic, administrative, and operational activities through a centralized school management platform.",
         },
         {
           number: "02",
           title: "The Experience",
           description:
-            "Provide organized interfaces for managing students, academic activities, financial records, and school services.",
+            "Provide structured interfaces for managing school information, operational workflows, and administrative data.",
         },
         {
           number: "03",
-          title: "The Platform",
+          title: "My Role",
           description:
-            "Support multiple education levels and user roles through consistent, data-driven management interfaces.",
+            "Develop frontend interfaces, integrate REST APIs, and implement reusable UI patterns across school management modules.",
         },
       ],
     },
@@ -822,24 +635,24 @@ export const caseStudies = {
       columns: [
         {
           label: "01 / The Challenge",
-          title: "Bringing diverse school operations together.",
+          title: "Managing complexity across school operations.",
           description:
-            "School management involves many interconnected activities, each with different workflows, data requirements, and user responsibilities. The challenge was to organize these operations into a consistent platform while keeping individual modules practical and easy to navigate.",
+            "A school management platform involves interconnected workflows, different data requirements, and multiple user responsibilities. The frontend challenge was to present complex information clearly while maintaining consistent interactions across academic, administrative, and operational modules.",
           points: [
-            "Support different academic levels and operational requirements.",
-            "Present complex student, financial, and administrative data clearly.",
-            "Maintain consistent interactions across multiple modules and user roles.",
+            "Organize complex information through structured forms and data tables.",
+            "Maintain consistent UI patterns across different management modules.",
+            "Handle asynchronous data, validation, and user feedback across workflows.",
           ],
         },
         {
           label: "02 / The Approach",
-          title: "A modular approach to everyday operations.",
+          title: "Reusable interfaces for connected workflows.",
           description:
-            "The frontend was developed around reusable interface patterns, structured data presentation, and REST API integration. Consistent layouts, forms, and management views help users navigate different school workflows while maintaining a cohesive experience.",
+            "I worked on frontend interfaces using reusable components, structured data presentation, and REST API integration. Shared layouts, form patterns, and consistent interaction states helped support different school management activities within a cohesive application.",
           points: [
-            "Create reusable components for dashboards, forms, and data tables.",
-            "Organize modules around academic and administrative responsibilities.",
-            "Integrate frontend workflows with backend services and role-based access.",
+            "Develop reusable components for forms, tables, and management interfaces.",
+            "Build responsive layouts for different administrative workflows.",
+            "Integrate REST APIs and handle loading, validation, and error states.",
           ],
         },
       ],
@@ -849,70 +662,25 @@ export const caseStudies = {
       heading: "Supporting education.",
       highlight: "Simplifying operations.",
       description:
-        "A closer look at the interconnected modules supporting academic activities, school administration, and everyday services.",
+        "An overview of the platform's core capabilities and the frontend work involved in supporting school management workflows.",
       items: [
         {
           number: "01",
           title: "Academic & Student Management",
           description:
-            "Structured workflows for managing student information, academic activities, and student affairs across different education levels within the school.",
-          image: "/images/case-study/tunas-unggul/academic.webp",
-          imageAlt: "Tunas Unggul academic and student management interface",
-          caption: "Academic & Student Affairs",
-          background: "#D8DCD3",
+            "Interfaces supporting student information, academic activities, and student affairs across different education levels. My frontend work involved presenting structured information, implementing management forms, and connecting interfaces with backend services.",
         },
         {
           number: "02",
           title: "Finance & Administration",
           description:
-            "Administrative tools for managing financial records, human resources, and reporting through organized data tables, forms, and management interfaces.",
-          image: "/images/case-study/tunas-unggul/finance.webp",
-          imageAlt: "Tunas Unggul finance and administration interface",
-          caption: "Finance & Administration",
-          background: "#DDD3C9",
+            "Administrative interfaces supporting financial records, human resources, and reporting. I worked on organizing data through consistent tables, forms, and API-connected interactions to support everyday management activities.",
         },
         {
           number: "03",
-          title: "Connected School Services",
+          title: "School Services & Transportation",
           description:
-            "Operational modules supporting school cooperative activities, orders, and transportation services, including route-based fare calculations using Google Maps.",
-          image: "/images/case-study/tunas-unggul/services.webp",
-          imageAlt: "Tunas Unggul school services and transportation interface",
-          caption: "School Services & Transportation",
-          background: "#DCE2DD",
-        },
-      ],
-    },
-
-    showcase: {
-      heading: "A closer look at",
-      highlight: "the school experience.",
-      description:
-        "Selected interfaces highlighting the academic, administrative, and operational workflows within Tunas Unggul.",
-      items: [
-        {
-          number: "01",
-          title: "The Management Dashboard",
-          description: "A centralized workspace for navigating school operations and management modules.",
-          image: "/images/case-study/tunas-unggul/dashboard.webp",
-          imageAlt: "Tunas Unggul school management dashboard",
-          background: "#D8DCD3",
-        },
-        {
-          number: "02",
-          title: "The Academic Experience",
-          description: "Managing student information and academic activities through structured interfaces.",
-          image: "/images/case-study/tunas-unggul/showcase-academic.webp",
-          imageAlt: "Tunas Unggul academic management interface",
-          background: "#DDD3C9",
-        },
-        {
-          number: "03",
-          title: "The Operational Experience",
-          description: "Supporting administrative tasks, school services, and reporting workflows.",
-          image: "/images/case-study/tunas-unggul/showcase-operations.webp",
-          imageAlt: "Tunas Unggul operational management interface",
-          background: "#DCE2DD",
+            "Operational features supporting school cooperative activities, orders, and transportation services. The platform also includes route-based fare calculations using Google Maps, connecting location-related functionality with school service workflows.",
         },
       ],
     },
@@ -920,7 +688,8 @@ export const caseStudies = {
     reflection: {
       heading: "Built for complexity.",
       highlight: "Focused on usability.",
-      description: "The frontend considerations and lessons behind building a multi-module school management platform.",
+      description:
+        "The frontend considerations and engineering practices behind a multi-module school management platform.",
       techStack: [
         {
           category: "Frontend Engineering",
@@ -938,8 +707,8 @@ export const caseStudies = {
       reflection: {
         title: "Building systems that work together.",
         paragraphs: [
-          "Working on Tunas Unggul gave me experience navigating the complexity of a large management platform with interconnected modules and different user responsibilities. Building consistent interfaces across academic, financial, and operational workflows reinforced the importance of reusable components and thoughtful information architecture.",
-          "The project also strengthened my ability to collaborate across disciplines, integrate frontend applications with backend services, and translate diverse operational requirements into practical user experiences. It shaped how I approach larger systems where clarity, consistency, and maintainability matter just as much as visual design.",
+          "Working on Tunas Unggul strengthened my experience developing frontend interfaces for a large management platform with interconnected modules and different user responsibilities. Maintaining consistency across academic, financial, and operational workflows reinforced the importance of reusable components and clear information architecture.",
+          "The project also improved my approach to API integration, form handling, and collaboration across different development responsibilities. It reinforced the importance of building maintainable interfaces that support practical workflows in complex applications.",
         ],
       },
     },

@@ -71,7 +71,7 @@ export default function Footer() {
 
             <ScrollReveal y={20} duration={0.8} delay={0.3}>
               <Link
-                href="mailto:hello@example.com"
+                href="mailto:hfairuzzaki@gmail.com"
                 className="group mt-7 inline-flex w-fit items-center gap-4 border-b border-white/40 pb-3 transition-colors duration-300 hover:border-white"
               >
                 <span className="font-manrope text-sm font-medium">Let&apos;s Talk</span>
