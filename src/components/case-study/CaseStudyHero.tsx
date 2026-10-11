@@ -30,7 +30,7 @@ export default function CaseStudyHero({
 
   return (
     <CaseStudyEntrance>
-      <section className="overflow-hidden bg-[#F6F2E9] px-6 pb-20 pt-36 sm:px-10 lg:px-14 lg:pb-28 lg:pt-44">
+      <section className="overflow-hidden bg-[#F6F2E9] px-6 py-20 sm:px-10 lg:px-14 lg:py-28">
         <div className="mx-auto max-w-350">
           {/* Header */}
           <div

@@ -18,7 +18,7 @@ export default function ProjectOverview({ heading, highlight, paragraphs, points
     <section
       id="overview"
       aria-labelledby="overview-title"
-      className="bg-[#E9E5DC] px-6 py-20 text-olive-dark sm:px-10 lg:px-14 lg:py-32"
+      className="bg-[#E9E5DC] px-6 py-20 text-olive-dark sm:px-10 lg:px-14 lg:py-28"
     >
       <div className="mx-auto max-w-350">
         {/* Section Label */}
