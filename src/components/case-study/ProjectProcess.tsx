@@ -18,7 +18,7 @@ export default function ProjectProcess({ heading, highlight, columns }: Readonly
     <section
       id="process"
       aria-labelledby="process-title"
-      className="bg-[#F6F2E9] px-6 py-20 text-olive-dark sm:px-10 lg:px-14 lg:py-32"
+      className="bg-[#F6F2E9] px-6 py-20 text-olive-dark sm:px-10 lg:px-14 lg:py-28"
     >
       <div className="mx-auto max-w-350">
         {/* Section Header */}
