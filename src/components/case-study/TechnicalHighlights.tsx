@@ -34,7 +34,7 @@ export default function TechnicalHighlights({
         {/* Heading */}
         <div className="mb-16 max-w-3xl lg:mb-24">
           <ScrollReveal y={48} duration={1.1} delay={0.1}>
-            <h2 className="font-display text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.95] tracking-tighter text-charcoal">
+            <h2 className="font-display text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.95] tracking-tighter text-charcoal">
               {heading} <span className="italic text-olive">{highlight}</span>
             </h2>
           </ScrollReveal>

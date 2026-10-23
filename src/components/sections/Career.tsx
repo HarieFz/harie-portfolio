@@ -1,4 +1,4 @@
-import { ArrowDownRight, Asterisk } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Asterisk } from "lucide-react";
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -24,11 +24,11 @@ export default function Career() {
           <ScrollReveal y={48} duration={1.1} delay={0.1}>
             <h2
               id="career-title"
-              className="font-display text-[clamp(3.5rem,7vw,8rem)] leading-[0.95] tracking-[-0.055em]"
+              className="font-display text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.055em]"
             >
-              More than
+              The path
               <br />
-              <span className="italic text-[#737B58]">just a resume.</span>
+              <span className="italic text-[#737B58]">so far.</span>
             </h2>
           </ScrollReveal>
         </div>
@@ -52,19 +52,40 @@ export default function Career() {
           <div className="lg:col-span-7">
             <ScrollReveal y={28} duration={0.9} delay={0.1}>
               <p className="font-manrope text-base leading-8 text-[#222819]/85 sm:text-lg">
-                My journey as a frontend developer has taken me across different industries, from financial technology
-                and API platforms to healthcare and education. Through professional roles and freelance collaborations,
-                I&apos;ve worked on diverse products, solved real-world challenges, and learned to balance technical
-                decisions with meaningful user experiences.
+                My path into frontend development began in 2022 with two intensive bootcamps, where I led the capstone
+                teams in both programs. Since 2023, I’ve been building web applications professionally.
               </p>
             </ScrollReveal>
 
             <ScrollReveal y={24} duration={0.9} delay={0.2}>
-              <p className="font-manrope mt-6 text-sm leading-7 text-[#222819]/75 sm:text-base sm:leading-8">
-                Beyond professional work, I also enjoy building products of my own, including a digital wedding
-                invitation platform that brings together design, development, and a personal creative vision. Each
-                experience continues to shape how I think, collaborate, and grow as a developer.
+              <p className="font-manrope mt-8 text-base leading-8 text-[#222819]/70">
+                I started as a freelance developer, building a real-time facial recognition attendance system and a
+                portfolio platform for university alumni. In 2024, I joined PT. Sinergi Nusantara Integrasi, where I
+                worked on the frontend of a school management system, a recruitment portal, and a clinic website with
+                online appointment booking.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal y={20} duration={0.9} delay={0.3}>
+              <p className="font-manrope mt-8 text-base leading-8 text-[#222819]/70">
+                In 2025, through Sinergi, I joined the Axel Intelligence project as a contract developer, contributing
+                to an API integration hub for Telkom Indonesia. My work focused on building its in-browser API testing
+                interface. I now work at PT. Bullion Ecosystem International, developing Vue.js applications across gold
+                trading and Umrah services, from gold savings plans to installment payment features for Umrah packages.
+              </p>
+            </ScrollReveal>
+
+            {/* CV Link */}
+            <ScrollReveal y={20} duration={0.9} delay={0.4}>
+              <a
+                href="/file/Harie-Fairuz-Zaki-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-manrope mt-10 inline-flex items-center gap-3 border-b border-[#222819]/30 pb-1 text-sm text-[#222819] transition-colors duration-300 hover:border-[#737B58] hover:text-[#737B58] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#737B58]"
+              >
+                View full CV
+                <ArrowUpRight size={16} strokeWidth={1.4} aria-hidden="true" />
+              </a>
             </ScrollReveal>
           </div>
         </div>

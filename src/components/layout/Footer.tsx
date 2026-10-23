@@ -17,6 +17,10 @@ const socials = [
     label: "Instagram",
     href: "https://www.instagram.com/hariefairuz",
   },
+  {
+    label: "CV",
+    href: "/file/Harie-Fairuz-Zaki-CV.pdf",
+  },
 ];
 
 const navigation = [
@@ -47,7 +51,7 @@ export default function Footer() {
           {/* Heading */}
           <div className="lg:col-span-9">
             <ScrollReveal y={56} duration={1.2} delay={0.1}>
-              <h2 className="font-display text-[clamp(3.5rem,7vw,8.5rem)] leading-[0.9] tracking-[-0.06em]">
+              <h2 className="font-display text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.06em]">
                 Have something
                 <br />
                 in mind?
