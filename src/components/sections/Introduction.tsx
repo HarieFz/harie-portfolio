@@ -31,7 +31,7 @@ export default function Introduction() {
             <ScrollReveal y={48} duration={1.1} delay={0.1}>
               <h2
                 id="introduction-title"
-                className="font-display max-w-4xl text-[clamp(3.5rem,7vw,8rem)] leading-[0.95] tracking-[-0.055em]"
+                className="font-display max-w-4xl text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.055em]"
               >
                 Interfaces built
                 <br />

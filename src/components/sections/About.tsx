@@ -27,7 +27,7 @@ export default function About() {
             <ScrollReveal y={48} duration={1.1} delay={0.1}>
               <h2
                 id="about-title"
-                className="font-display max-w-4xl text-[clamp(3.25rem,6vw,7rem)] leading-[0.98] tracking-[-0.055em]"
+                className="font-display max-w-4xl text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.055em]"
               >
                 A little about
                 <br />
@@ -73,15 +73,32 @@ export default function About() {
           <div className="lg:col-span-7">
             <ScrollReveal y={28} duration={0.9} delay={0.1}>
               <p className="font-manrope max-w-2xl text-base leading-8 text-[#222819]/80 sm:text-lg">
-                I'm a frontend developer focused on building responsive, accessible, and thoughtfully crafted web
-                interfaces. I enjoy bringing visual ideas to life through clean, maintainable code.
+                I’m Harie, a frontend developer based in Garut, Indonesia. I care about the quality of what I build,
+                beyond whether it simply works.
               </p>
             </ScrollReveal>
 
             <ScrollReveal y={24} duration={0.9} delay={0.2}>
-              <p className="font-manrope mt-5 max-w-2xl text-sm leading-7 text-[#222819]/65">
-                Beyond making things look good, I care about how they work and feel. From subtle interactions to the
-                smallest layout details, I aim to create experiences that are consistent, intuitive, and purposeful.
+              <p className="font-manrope mt-5 max-w-2xl text-base leading-7 text-[#222819]/80">
+                I focus on writing clean, maintainable code and structuring features and application flows with
+                scalability, performance, and security in mind from the start. On the UI side, I translate Figma designs
+                into pixel-accurate, consistent interfaces that stay true to the designer’s intent.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal y={20} duration={0.9} delay={0.3}>
+              <p className="font-manrope mt-5 max-w-2xl text-base leading-7 text-[#222819]/80">
+                I also believe good development means questioning assumptions. I look critically at design decisions,
+                user flows, and requirements to find simpler, more effective solutions without adding unnecessary
+                complexity. The best outcomes come from open discussion: challenging ideas, weighing different
+                perspectives, and staying focused on what works best for the product.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal y={16} duration={0.9} delay={0.4}>
+              <p className="font-manrope mt-5 max-w-2xl text-base leading-7 text-[#222819]/80">
+                Ultimately, I want to build products that genuinely serve their users and that I can be proud to have
+                built.
               </p>
             </ScrollReveal>
           </div>

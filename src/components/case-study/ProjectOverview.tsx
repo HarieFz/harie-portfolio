@@ -37,7 +37,7 @@ export default function ProjectOverview({ heading, highlight, paragraphs, points
             <ScrollReveal y={48} duration={1.1} delay={0.1}>
               <h2
                 id="overview-title"
-                className="font-display text-[clamp(3.5rem,6vw,7rem)] leading-[0.95] tracking-[-0.055em]"
+                className="font-display text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.95] tracking-[-0.055em]"
               >
                 {heading}
                 <br />

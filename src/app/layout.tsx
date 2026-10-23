@@ -91,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`${cormorant.variable} ${manrope.variable} antialiased`}>
         <PageTransition>{children}</PageTransition>
       </body>

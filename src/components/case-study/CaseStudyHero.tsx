@@ -51,7 +51,7 @@ export default function CaseStudyHero({
 
               <h1
                 data-case-title
-                className="font-display max-w-5xl text-[clamp(3.5rem,7.5vw,8rem)] leading-[0.9] tracking-[-0.055em] text-charcoal"
+                className="font-display max-w-5xl text-[clamp(2.75rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.055em] text-charcoal"
               >
                 {title}
                 <span className="text-olive">.</span>
